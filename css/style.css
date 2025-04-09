@@ -1,0 +1,604 @@
+:root {
+  font-size: 100%;
+  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+*::before,
+*::after {
+  display: block;
+}
+img,
+picture,
+video,
+iframe,
+figure,
+canvas {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: initial;
+  object-fit: cover;
+  object-position: center center;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+p a {
+  display: inline;
+}
+li,
+menu,
+summary {
+  list-style-type: none;
+}
+ol {
+  counter-reset: revert;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em,
+pre,
+code,
+mark,
+del {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+mark {
+  background-color: transparent;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  appearance: none;
+}
+fieldset {
+  border: none;
+}
+::placeholder {
+  color: unset;
+}
+button,
+label {
+  cursor: pointer;
+}
+table,
+tr,
+td,
+th,
+tbody,
+thead,
+tfoot {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: inherit;
+}
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5em;
+  color: inherit;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.body--no-scroll {
+  overflow: hidden;
+}
+
+.Header {
+  /* background-color: rgb(147, 241, 163); */
+  min-height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .Header-logo {
+    /* background-color: blueviolet; */
+    margin: 0 0 0 3.125rem;
+  }
+
+  .Header-abrir {
+    display: none;
+  }
+
+  .Header-nav {
+    .Header-ul {
+      /* background-color: aquamarine; */
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      margin: 0 6.25rem 0 0;
+    }
+
+    .Header-cerrar {
+      display: none;
+    }
+  }
+}
+
+.Header::after {
+  content: "";
+  width: 100%;
+  min-height: 0.625rem;
+  background: linear-gradient(to right, yellow 33%, blue 33% 66%, red 66% 100%);
+}
+
+.Hero {
+  background-image: url(../assets/Hero-img.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: calc(100vh - 15vh);
+  display: flex;
+  padding: 5rem;
+  gap: 2rem;
+
+  .Hero-h1 {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-size: 9.375rem;
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform: rotate(-15deg);
+    -webkit-text-stroke: 3px rgb(9, 16, 39);
+    margin-bottom: 1.25rem;
+  }
+
+  .Hero-carrousel {
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+
+    .Hero-imagenes {
+      /* background-color: blueviolet; */
+      min-height: 200px;
+      display: grid;
+
+      .Hero-img {
+        height: 300px;
+        /* background-color: orange; */
+        scroll-snap-align: center;
+        transition: opacity 0.6s ease, scale 0.6s ease;
+      }
+    }
+
+    .Hero-arrows {
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      
+     
+
+      .Hero-arrow {
+        --size: 3rem;
+        width: var(--size);
+        height: var(--size);
+       
+        position: absolute;
+ 
+        background-color: white;
+        width: fit-content;
+
+        border-radius: 1rem;
+        top: 50%;
+        margin: auto 20px;
+      
+
+        cursor: pointer;
+      }
+
+      .Hero-arrow--prev {
+        left: 0;
+        
+      
+
+      }
+      .Hero-arrow--next {
+        right: 0;
+      }
+    }
+  }
+}
+
+.Destinos {
+  min-height: 100vh;
+
+  padding: 3.125rem;
+
+ 
+  .Regiones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    margin: 1.875rem 0 0 0;
+    position: relative;
+
+   .modal-titulo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+  background-color: red;
+    padding: 5px 10px;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 5px;
+    font-size: 14px;
+ 
+    pointer-events: none;
+    z-index: 1000;
+    top: 0;
+   
+    right: 0;;
+  }
+
+    .Departamento{
+      
+      width: 30%;
+      min-height: 40vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      background: #e0e0e0;
+      box-shadow:  -26px -26px 51px #989898,
+                   26px 26px 51px #ffffff;
+
+      .Departamento-img {
+        background-color: purple;
+        width: 100%;
+        height: 50vh;
+        border-top-right-radius: 1.25rem;
+        border-top-left-radius: 1.25rem;
+        object-fit: cover;
+        
+  
+      }
+
+      .Departamento-descripcion{
+        width: 100%;
+        min-height: 20vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: .5rem;
+        padding: 1.25rem;
+        color: black;
+        border: black 1px solid;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+
+        .Capital{
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          
+          
+        }
+        
+      }
+    }
+
+    .Destinos-mapa {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+     
+
+      .mapsvg-svg {
+        path {
+          fill: #cecece;
+        }
+        .departamento--activo {
+          fill: #007b8a;
+          cursor: pointer; 
+        }
+      }
+    }
+  }
+
+  .Regiones-info{
+    background-color: blueviolet;
+    width: 100%;
+    min-height: 80vh;
+    display: none;
+  }
+}
+
+.Info {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: rgb(97, 131, 97); */
+  padding: 3.125rem;
+
+
+  .Info-h2 {
+  }
+
+  .Info-util {
+    /* background-color: burlywood; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    .Info-especifica {
+      /* background-color: blueviolet; */
+      min-height: 30vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+      z-index: 1;
+
+      .Info-img {
+        width: 6.25rem;
+        height: 6.25rem;
+        object-fit: cover;
+
+      }
+    }
+
+    .Info-superior{
+      opacity: 0;
+      background-color: chocolate;
+      width: 100%;
+      min-height: 55vh;
+      position: absolute;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+
+      .Info-superior-h3{
+
+      }
+      
+      .Info-superior-cerrar{
+
+      }
+
+      .Info-superior-llegar-transportarse{
+        display: flex;
+        flex-direction: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .Info-superior-llegar{
+
+        }
+  
+        .Info-superior-transportarse{
+  
+        }
+
+      }
+
+     
+
+
+    }
+
+    .Info-superior--visible {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
+
+.Footer {
+  background-color: red;
+  min-height: 80vh;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .Header {
+    width: 100%;
+
+    .Header-logo {
+    }
+
+    .Header-abrir {
+      display: flex;
+      z-index: 2;
+      padding: 2rem;
+    }
+
+    .Header-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 100%;
+      max-width: 30%;
+      background-color: white;
+      opacity: 0;
+      padding: 1rem;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+      .Header-cerrar {
+        display: flex;
+      }
+      .Header-ul {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+
+        width: 100%;
+
+        .Header-li::after {
+          content: "";
+          width: 100%;
+          height: 0.0625rem;
+
+          background-color: black;
+        }
+      }
+
+      .Header-ul::after {
+        content: "";
+        width: 50%;
+        height: 0.625rem;
+        display: flex;
+        align-items: end;
+        background: linear-gradient(
+          to right,
+          yellow 33%,
+          blue 33% 66%,
+          red 66% 100%
+        );
+      }
+    }
+
+    .Header-nav--visible {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+
+  .Hero {
+    flex-flow: column nowrap;
+    .Hero-carrousel {
+      width: 100%;
+
+      .Hero-arrows {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .Destinos {
+    .Regiones {
+      flex-direction: column-reverse;
+
+      .Regiones-img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .Destinos {
+    
+
+    .Regiones {
+      display: none;
+     
+      }
+
+      .Regiones-info{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+
+        .Info-img{
+          background-color:aqua;
+          width: 100%;
+          height: 60vh;
+        }
+
+        .Info-p{
+          background-color: chartreuse;
+          width: 100%;
+          min-height: 40vh;
+
+        }
+
+      }
+    }
+  }
+
+
+@media (max-width: 600px) {
+  .Info {
+    .Info-util {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
