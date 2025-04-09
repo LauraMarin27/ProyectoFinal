@@ -236,9 +236,16 @@ const regiones = document.querySelectorAll(`.departamento`)
 const imagenMapa = document.querySelector(`.Departamento-img`)
 const capital = document.querySelector(`.Capital-h4`)
 const fraseCapital = document.querySelector(`.Capital-p`)
-const modalTitulo = document.getElementById('modal-titulo');
+const modalTitulo = document.querySelector('.modal-titulo');
+console.log("modal titulo",modalTitulo)
 
 regiones.forEach((_, i)=>{
+
+    regiones[i].addEventListener(`mouseover`, ()=>{
+        const tituloDepartamento = regiones[i].getAttribute(`title`)
+        modalTitulo.innerText = tituloDepartamento;
+    }
+    )
 
 
     regiones[i].addEventListener(`click`, ()=>{

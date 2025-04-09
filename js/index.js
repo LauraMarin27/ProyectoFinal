@@ -68,19 +68,22 @@ carrouselNext.addEventListener(`click` , carrouselNextHandler )
 carrouselPrev.addEventListener(`click` , carrouselPrevHandler )
 
 
-
+const info = document.querySelector(`.Info`)
 const infoEspecifica = document.querySelectorAll(`.Info-especifica`)
 const infoSuperior = document.querySelectorAll(`.Info-superior`)
 const botonCerrar = document.querySelectorAll(`.Info-superior-cerrar`)
 
 
 
+
 infoEspecifica.forEach((_,i)=>{
     infoEspecifica[i].addEventListener(`click`,()=>{
          infoSuperior[i].classList.add(`Info-superior--visible`)
+
         if(botonCerrar[i]){
             botonCerrar[i].addEventListener(`click`,()=>{
                 infoSuperior[i].classList.remove(`Info-superior--visible`)
+               
             })
         }
       

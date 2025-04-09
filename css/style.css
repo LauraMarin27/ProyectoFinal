@@ -38,14 +38,8 @@ a {
 p a {
   display: inline;
 }
-li,
-menu,
-summary {
-  list-style-type: none;
-}
-ol {
-  counter-reset: revert;
-}
+
+
 h1,
 h2,
 h3,
@@ -279,22 +273,32 @@ body {
     margin: 1.875rem 0 0 0;
     position: relative;
 
-   .modal-titulo {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-  background-color: red;
-    padding: 5px 10px;
-    width: 6.25rem;
-    height: 6.25rem;
-    border-radius: 5px;
-    font-size: 14px;
- 
-    pointer-events: none;
-    z-index: 1000;
-    top: 0;
-   
-    right: 0;;
-  }
+
+    .Lugar-mapa{
+      position: absolute;
+        width: 12.5rem;
+        height: auto;
+        padding: 1.25rem;
+       
+        pointer-events: none;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        display: flex;
+
+        .mapa{
+          width: 1.875rem;
+          height: 1.875rem;
+        }
+
+      .modal-titulo {
+        font-size: 20px;
+      
+        
+      }
+
+    }
+  
 
     .Departamento{
       
@@ -372,21 +376,34 @@ body {
 }
 
 .Info {
+
+  border-radius: 50px;
+background: #FFDD57;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  margin: 1.25rem 0 0 0;
+  border-radius: 1.25rem;
+
   min-height: 100vh;
   width: 100%;
-  /* background-color: rgb(97, 131, 97); */
+  
   padding: 3.125rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
 
 
   .Info-h2 {
   }
 
   .Info-util {
-    /* background-color: burlywood; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    position: relative;
+    
     align-items: center;
     justify-content: center;
 
@@ -411,7 +428,10 @@ body {
 
     .Info-superior{
       opacity: 0;
-      background-color: chocolate;
+      background-color: #f9f9f9;
+      border-radius: .625rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
       width: 100%;
       min-height: 55vh;
       position: absolute;
@@ -419,29 +439,62 @@ body {
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
-      padding: 2rem;
-
-      .Info-superior-h3{
-
-      }
+      min-height: 80vh;
+     top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+   
       
-      .Info-superior-cerrar{
+
+      .Info-superior-titulo{
+        display: flex;
+        gap: 1.25rem;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border-radius: 50px;
+        
+        
+        
+        .Info-superior-h3{
+          font-size: 1.8rem;
+          font-weight: bold;
+         
+          margin-bottom: 15px;
+
+        }
+        
+        .Info-superior-cerrar{
+          padding: 1.25rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
       }
+
+      
 
       .Info-superior-llegar-transportarse{
         display: flex;
-        flex-direction: row nowrap;
         justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        .Info-superior-llegar{
+        align-items: start;
+        gap: 1.25rem;
+        padding: .625rem;
 
-        }
-  
-        .Info-superior-transportarse{
-  
+      
+        .Info-superior-llegar{
+          
+          .Info-superior-llegar-ul{
+            .Info-superior-llegar-li{
+             margin:0 0 0 .625rem;
+
+              
+
+            }
+          }
+
         }
 
       }
@@ -454,9 +507,12 @@ body {
     .Info-superior--visible {
       opacity: 1;
       z-index: 2;
+      
     }
   }
 }
+
+
 
 .Footer {
   background-color: red;
