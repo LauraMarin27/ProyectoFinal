@@ -357,10 +357,10 @@ body {
 
       .mapsvg-svg {
         path {
-          fill: #cecece;
+          fill:  #0057B7;
         }
         .departamento--activo {
-          fill: #007b8a;
+          fill: #2ecc71;
           cursor: pointer; 
         }
       }
@@ -433,13 +433,13 @@ box-shadow:  20px 20px 60px #bebebe,
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       padding: 2rem;
       width: 100%;
-      min-height: 55vh;
+      min-height: 80vh;
       position: absolute;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      min-height: 80vh;
+      
      top: 50%;
      left: 50%;
     transform: translate(-50%, -50%);
@@ -457,7 +457,7 @@ box-shadow:  20px 20px 60px #bebebe,
         
         
         
-        .Info-superior-h3{
+        .Info-superior-h2{
           font-size: 1.8rem;
           font-weight: bold;
          
@@ -478,17 +478,20 @@ box-shadow:  20px 20px 60px #bebebe,
 
       .Info-superior-llegar-transportarse{
         display: flex;
-        justify-content: center;
+        width: 100%;
+        justify-content: space-evenly;
         align-items: start;
         gap: 1.25rem;
         padding: .625rem;
+        
 
       
         .Info-superior-llegar{
+          width: 50%;
           
           .Info-superior-llegar-ul{
             .Info-superior-llegar-li{
-             margin:0 0 0 .625rem;
+             
 
               
 
