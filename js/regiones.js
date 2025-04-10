@@ -242,7 +242,7 @@ console.log("modal titulo",modalTitulo)
 regiones.forEach((_, i)=>{
 
     regiones[i].addEventListener(`mouseover`, ()=>{
-        const tituloDepartamento = regiones[i].getAttribute(`title`)
+        const tituloDepartamento = regiones[i].getAttribute(`id`)
         modalTitulo.innerText = tituloDepartamento;
     }
     )
@@ -255,7 +255,7 @@ regiones.forEach((_, i)=>{
 
         regiones[i].classList.add(`departamento--activo`)
 
-        const tituloDepartamento = regiones[i].getAttribute(`title`)
+        const tituloDepartamento = regiones[i].getAttribute(`id`)
        imagenMapa.alt = tituloDepartamento;
        imagenMapa.src = `./assets/${tituloDepartamento}.webp`;
        const regionData = regionesInfo[tituloDepartamento];

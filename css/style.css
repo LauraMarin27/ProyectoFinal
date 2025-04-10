@@ -215,7 +215,7 @@ body {
 
       .Hero-img {
         height: 300px;
-        /* background-color: orange; */
+       
         scroll-snap-align: center;
         transition: opacity 0.6s ease, scale 0.6s ease;
       }
@@ -302,7 +302,7 @@ body {
   
 
     .Departamento{
-      width: 40%;
+      width: 30%;
       min-height: 40vh;
       display: flex;
       flex-flow: column nowrap;
@@ -352,9 +352,8 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      
      
-     
-
       .mapsvg-svg {
         path {
           fill:  #0057B7;
@@ -396,14 +395,12 @@ box-shadow:  20px 20px 60px #bebebe,
  
 
 
-  .Info-h2 {
-  }
+  
 
   .Info-util {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    
     align-items: center;
     justify-content: center;
 
@@ -434,18 +431,18 @@ box-shadow:  20px 20px 60px #bebebe,
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       padding: 2rem;
       width: 90%;
-      min-height: 80vh;
-      max-height: 37.5rem;
+      max-height: 90%;
       position: absolute;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       margin: auto;
       
      top: 50%;
      left: 50%;
     transform: translate(-50%, -50%);
+  
     overflow-y: auto;
    
       
@@ -487,22 +484,8 @@ box-shadow:  20px 20px 60px #bebebe,
         align-items: start;
         gap: 1.25rem;
         padding: .625rem;
+       
         
-
-      
-        .Info-superior-llegar{
-          width: 50%;
-          
-          .Info-superior-llegar-ul{
-            .Info-superior-llegar-li{
-             
-
-              
-
-            }
-          }
-
-        }
 
         .Cultura-img{
           max-height: 11.25rem;
@@ -518,6 +501,7 @@ box-shadow:  20px 20px 60px #bebebe,
           object-fit: cover;
           border-radius: 1.25rem;
           margin: .625rem 0 0 0;
+          max-width: 25rem;
 
         }
 
@@ -616,15 +600,13 @@ box-shadow:  20px 20px 60px #bebebe,
     }
   }
 
+
   .Footer-enlaces{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:start;
-    .Footer-enlaces-ul{
-      
-     
-    }
+   
   }
 }
 
@@ -644,7 +626,7 @@ box-shadow:  20px 20px 60px #bebebe,
   .Destinos {
     .Regiones {
         .Departamento {
-            width: 30%;
+            width: 40%;
         }
     }
 }
@@ -738,79 +720,123 @@ box-shadow:  20px 20px 60px #bebebe,
     .Regiones {
       flex-direction: column-reverse;
       .Departamento {
-        width: 50%;
+        width: 70%;
     }
     }
 }
 }
 
-
-  /* .Hero {
-    flex-flow: column nowrap;
-    .Hero-carrousel {
-      width: 100%;
-
-      .Hero-arrows {
-        justify-content: center;
-        align-items: center;
-      }
+@media (max-width: 800px) {
+  .Info {
+     .Info-util {
+        & .Info-superior {
+            .Info-superior-llegar-transportarse {
+              flex-direction: column;
+              width: 100%;
+              
+              .Info-superior-llegar-ul {
+                width: 100%;
+              }
+            }
+        }
     }
-  }
 }
-
-@media (max-width: 900px) {
-  .Destinos {
-    .Regiones {
-      flex-direction: column-reverse;
-
-      .Regiones-img {
-        width: 80%;
-      }
-    }
-  }
 }
 
 @media (max-width: 700px) {
-  .Destinos {
-    
-
-    .Regiones {
-      display: none;
-     
-      }
-
-      .Regiones-info{
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-
-        .Info-img{
-          background-color:aqua;
-          width: 100%;
-          height: 60vh;
-        }
-
-        .Info-p{
-          background-color: chartreuse;
-          width: 100%;
-          min-height: 40vh;
-
-        }
-
-      }
+  .Hero {
+    .Hero-h1 {
+       
+        font-size: 6.25rem;
+      
     }
-  }
+}
 
+h1 {
 
-@media (max-width: 600px) {
   .Info {
     .Info-util {
       grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+.Footer {
+  .Footer-social-enlaces {
+      flex-direction: column-reverse;
+
+      .Footer-enlaces {
+        align-items: start;
+        margin: 0 0 1.25rem 0;
+    }
+
+    .Footer-social{
+      .Footer-social-ul{
+        .Footer-social-li{
+          .Footer-social-media{
+            width: 2.5rem;
+            height: 2.5rem;
+            
+            
+          }
+  
+         
+        }
+      }
     }
   }
-} */
+
+  
+
+  
+}
+}
+
+@media (max-width: 500px) {
+  .Hero {
+    .Hero-h1 {
+        font-size: 4rem;
+        min-height: 30vh;
+       
+    }
+}
+
+.Destinos {
+  .Regiones {
+      .Destinos-mapa {
+          max-height: 400px;
+      }
+
+      .Departamento {
+        width: 90%;
+    }
+  }
+}
+
+.Info {
+  .Info-util {
+      grid-template-columns: 1fr;
+
+            .Info-superior {
+              height: 100%;
+                
+            }
+        
+}
+     
+  }
+}
+}
+
+@media (max-width: 320px) {
+  .Hero {
+    .Hero-h1 {
+        font-size: 5.375rem;
+        min-height: 30vh;
+    }
+}
+}
+
+
 
 

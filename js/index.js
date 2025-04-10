@@ -62,11 +62,24 @@ const carrouselPrevHandler = () =>{
 
 }
 
+const windowKeydownHandler = ( e )=>{
+    const { key } = e
+    
+    key == 'ArrowRight' && carrouselNextHandler()
+    key == 'ArrowLeft'  && carrouselPrevHandler()
+    
+    if( key == 0 || key == 1 || key == 2 || key == 3 || key == 4 || key == 5 || key == 6 || key == 7 || key == 8 || key == 9 ){
+        contador = key - 1
+        carrouselWrapperMove()
+        
+    }
+
+}
 
 
 carrouselNext.addEventListener(`click` , carrouselNextHandler )
 carrouselPrev.addEventListener(`click` , carrouselPrevHandler )
-
+window.addEventListener(`keydown` , windowKeydownHandler )
 
 const info = document.querySelector(`.Info`)
 const infoEspecifica = document.querySelectorAll(`.Info-especifica`)
