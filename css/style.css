@@ -177,6 +177,8 @@ body {
   width: 100%;
   min-height: calc(100vh - 15vh);
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5rem;
   gap: 2rem;
 
@@ -196,7 +198,7 @@ body {
   }
 
   .Hero-carrousel {
-    width: 80%;
+   
     max-width: 600px;
     background-color: white;
     margin: auto;
@@ -276,8 +278,7 @@ body {
 
     .Lugar-mapa{
       position: absolute;
-        width: 12.5rem;
-        height: auto;
+        
         padding: 1.25rem;
        
         pointer-events: none;
@@ -301,8 +302,7 @@ body {
   
 
     .Departamento{
-      
-      width: 30%;
+      width: 40%;
       min-height: 40vh;
       display: flex;
       flex-flow: column nowrap;
@@ -415,6 +415,7 @@ box-shadow:  20px 20px 60px #bebebe,
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
      
       z-index: 1;
 
@@ -434,15 +435,18 @@ box-shadow:  20px 20px 60px #bebebe,
       padding: 2rem;
       width: 90%;
       min-height: 80vh;
+      max-height: 37.5rem;
       position: absolute;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
+      margin: auto;
       
      top: 50%;
      left: 50%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
    
       
 
@@ -461,7 +465,7 @@ box-shadow:  20px 20px 60px #bebebe,
           font-size: 1.8rem;
           font-weight: bold;
          
-          margin-bottom: 15px;
+          margin-bottom: .9375rem 0 .9375rem 0;
 
         }
         
@@ -525,6 +529,7 @@ box-shadow:  20px 20px 60px #bebebe,
           display: flex;
           gap: 2rem;
           margin: 1.25rem 0 0 0;
+          width: 50%;
           .Postres-img{
            max-height: 11.25rem;
             object-fit: cover;
@@ -595,6 +600,19 @@ box-shadow:  20px 20px 60px #bebebe,
     .Footer-social-ul{
       display: flex;
       gap: 2.5rem;
+
+      .Footer-social-li{
+        .Footer-social-media{
+          width: 3.125rem;
+          height: 3.125rem;
+          
+          
+        }
+
+        .Footer-social-media-tiktok{
+          padding: .3125rem;
+        }
+      }
     }
   }
 
@@ -622,12 +640,30 @@ box-shadow:  20px 20px 60px #bebebe,
  
 }
 
+@media (max-width: 1100px) {
+  .Destinos {
+    .Regiones {
+        .Departamento {
+            width: 30%;
+        }
+    }
+}
+  
+}
+
+@media (max-width: 1000px) {
+  .Info {
+    & .Info-util {
+        .Info-superior {
+            width: 100%;
+        }
+    }
+}
+}
+
 @media (max-width: 900px) {
   .Header {
     width: 100%;
-
-    .Header-logo {
-    }
 
     .Header-abrir {
       display: flex;
@@ -693,7 +729,23 @@ box-shadow:  20px 20px 60px #bebebe,
     }
   }
 
-  .Hero {
+  .Hero{
+    flex-direction: column;
+    
+  }
+
+  .Destinos {
+    .Regiones {
+      flex-direction: column-reverse;
+      .Departamento {
+        width: 50%;
+    }
+    }
+}
+}
+
+
+  /* .Hero {
     flex-flow: column nowrap;
     .Hero-carrousel {
       width: 100%;
@@ -759,4 +811,6 @@ box-shadow:  20px 20px 60px #bebebe,
       grid-template-columns: repeat(2, 1fr);
     }
   }
-}
+} */
+
+
