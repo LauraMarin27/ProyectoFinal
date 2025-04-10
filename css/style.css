@@ -432,7 +432,7 @@ box-shadow:  20px 20px 60px #bebebe,
       border-radius: .625rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       padding: 2rem;
-      width: 100%;
+      width: 90%;
       min-height: 80vh;
       position: absolute;
       display: flex;
@@ -500,6 +500,43 @@ box-shadow:  20px 20px 60px #bebebe,
 
         }
 
+        .Cultura-img{
+          max-height: 11.25rem;
+          width: 50%;
+          object-fit: cover;
+          border-radius: 1.25rem;
+          margin: .625rem 0 0 0;
+        }
+
+        .Imperdibles-img{
+          max-height: 11.25rem;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 1.25rem;
+          margin: .625rem 0 0 0;
+
+        }
+
+        
+
+        .Bebidas-postres{
+         
+          min-height: 12.5rem;
+          display: flex;
+          gap: 2rem;
+          margin: 1.25rem 0 0 0;
+          .Postres-img{
+           max-height: 11.25rem;
+            object-fit: cover;
+            border-radius: 1.25rem;
+          }
+          .Bebidas-img{
+            max-height: 11.25rem;
+            object-fit: cover;
+            border-radius: 1.25rem;
+          }
+        }
+
       }
 
      
@@ -518,9 +555,71 @@ box-shadow:  20px 20px 60px #bebebe,
 
 
 .Footer {
-  background-color: red;
-  min-height: 80vh;
+  /*Degradado hecho con ChatGpt*/
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)), 
+  url(../assets/footer-img.webp); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
   width: 100%;
+  object-fit: cover;
+  min-height: 80vh;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .Footer-mapa{
+    width: 100%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 1rem; 
+
+    .Footer-img{
+      width: 6.25rem;
+      height: 6.25rem;
+     
+    }
+
+
+  }
+
+.Footer-social-enlaces{
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .Footer-social{
+    .Footer-social-ul{
+      display: flex;
+      gap: 2.5rem;
+    }
+  }
+
+  .Footer-enlaces{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+    .Footer-enlaces-ul{
+      
+     
+    }
+  }
+}
+
+  .Footer-mapa::after, .Footer-mapa::before{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 20px;
+ 
+  }
+ 
+ 
 }
 
 @media (max-width: 900px) {
