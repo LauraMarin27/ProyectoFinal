@@ -1,0 +1,153 @@
+:root {
+    font-size : 100%;
+    font-family : system-ui, sans-serif;
+    scroll-behavior : smooth;
+  }
+  * , *::before , *::after {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    vertical-align : baseline;
+  }
+  *::before , *::after {
+    display : block;
+  }
+  img , picture , video , iframe , figure , canvas {
+    max-width : 100%;
+    display : block;
+    width : 100%;
+    height : initial;
+    object-fit : cover;
+    object-position : center center;
+  }
+  a {
+    display : block;
+    text-decoration : none;
+    color : inherit;
+    font :  inherit;
+  }
+  p a {
+    display : inline;
+  }
+  li , menu, summary {
+    list-style-type : none;
+  }
+  ol {
+    counter-reset : revert;
+  }
+  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+    font :  inherit;
+    text-decoration :  none;
+    color : inherit;
+    overflow-wrap : break-word;
+    text-wrap : pretty;
+  }
+  mark {
+    background-color : transparent;
+  }
+  blockquote::before , blockquote::after , q::before , q::after {
+    content : none;
+  }
+  form , input , textarea , select , button , label {
+    font :  inherit;
+    hyphens : auto;
+    background-color : transparent;
+    color : inherit;
+    display : block;
+    appearance : none;
+  }
+  fieldset {
+    border : none;
+  }
+  ::placeholder {
+    color : unset;
+  }
+  button , label {
+    cursor : pointer;
+  }
+  table , tr , td , th , tbody , thead , tfoot {
+    border-collapse : collapse;
+    border-spacing : 0;
+    font : inherit;
+  }
+  svg {
+    width : 100%;
+    display : block;
+    fill : currentColor;
+  }
+  body {
+    min-height : 100vh;
+    line-height : 1.5em;
+    color : inherit;
+    hyphens : auto;
+    font-smooth : always;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+  }
+
+  .Hero{
+    min-height: calc(100vh - 15vh);
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+
+    .Hero-cite{
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        width: 100%;
+
+    }
+  }
+
+  .Regiones{
+    background-color: blueviolet;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding: 3.125rem;
+
+    .Regiones-svg{
+        background-color: coral;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1.25rem;
+        
+
+        .Region-svg{
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center ;
+            align-items: center;
+            margin: auto;
+
+            .Regiones-img{
+                background-color: black;
+            }
+        }
+    }
+  }
+
+  .Regiones-container{
+    background-color: lightgreen;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding: 3.125rem;
+
+    
+  }
