@@ -260,16 +260,63 @@ box-shadow:  20px 20px 60px #bebebe,
       .Regiones-content{
         display: none;
 
+
+
       }
       .active{
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+
+        .Regiones-content-departamentos{
+
+          .departamentos-list{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            
+            
+          }
+
+        }
+
       }
     }
 
     
   }
+
+  .Regiones-container--caribe{
+    background-color: #E5FCFF;;
+
+  }
+
+  .Regiones-container--andesOccidentales{
+    background-color: #FFF7F9;
+
+  }
+
+  .Regiones-container--pacifico{
+    background-color:#F0F4FF;
+
+  }
+
+  .Regiones-container--antesOrientales{
+    background-color:#FFF7F9;
+
+  }
+
+  .Regiones-container--macizo{
+    background-color: #FFF9EB;
+
+  }
+
+  .Regiones-container--amazonas{
+    background-color: #F4FFF7;;
+  }
+
+
 
   
