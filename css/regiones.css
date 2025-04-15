@@ -1,322 +1,602 @@
 :root {
-    font-size : 100%;
-    font-family : system-ui, sans-serif;
-    scroll-behavior : smooth;
-  }
-  * , *::before , *::after {
-    margin : 0;
-    padding : 0;
-    border : 0;
-    box-sizing : border-box;
-    vertical-align : baseline;
-  }
-  *::before , *::after {
-    display : block;
-  }
-  img , picture , video , iframe , figure , canvas {
-    max-width : 100%;
-    display : block;
-    width : 100%;
-    height : initial;
-    object-fit : cover;
-    object-position : center center;
-  }
-  a {
-    display : block;
-    text-decoration : none;
-    color : inherit;
-    font :  inherit;
-  }
-  p a {
-    display : inline;
-  }
-  li , menu, summary {
-    list-style-type : none;
-  }
-  ol {
-    counter-reset : revert;
-  }
-  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
-    font :  inherit;
-    text-decoration :  none;
-    color : inherit;
-    overflow-wrap : break-word;
-    text-wrap : pretty;
-  }
-  mark {
-    background-color : transparent;
-  }
-  blockquote::before , blockquote::after , q::before , q::after {
-    content : none;
-  }
-  form , input , textarea , select , button , label {
-    font :  inherit;
-    hyphens : auto;
-    background-color : transparent;
-    color : inherit;
-    display : block;
-    appearance : none;
-  }
-  fieldset {
-    border : none;
-  }
-  ::placeholder {
-    color : unset;
-  }
-  button , label {
-    cursor : pointer;
-  }
-  table , tr , td , th , tbody , thead , tfoot {
-    border-collapse : collapse;
-    border-spacing : 0;
-    font : inherit;
-  }
-  svg {
-    width : 100%;
-    display : block;
-    fill : currentColor;
-  }
-  body {
-    min-height : 100vh;
-    line-height : 1.5em;
-    color : inherit;
-    hyphens : auto;
-    font-smooth : always;
-    -webkit-font-smoothing : antialiased;
-    -moz-osx-font-smoothing : grayscale;
-  }
+  font-size: 100%;
+  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
 
-  .Hero{
-    background-image: 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+picture,
+video,
+iframe,
+figure,
+canvas {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: initial;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li,
+menu,
+summary {
+  list-style-type: none;
+}
+
+ol {
+  counter-reset: revert;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+blockquote,
+i,
+b,
+u,
+em,
+pre,
+code,
+mark,
+del {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+mark {
+  background-color: transparent;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  appearance: none;
+}
+
+fieldset {
+  border: none;
+}
+
+::placeholder {
+  color: unset;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+table,
+tr,
+td,
+th,
+tbody,
+thead,
+tfoot {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: inherit;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5em;
+  color: inherit;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+.Hero {
+  background-image:
     linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
     url('../assets/heroImg.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: calc(100vh - 15vh);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: calc(100vh - 15vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  color: white;
+  font-size: 1.125rem;
+  font-style: italic;
+
+
+  .Hero-cite {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: start;
-    padding: 0 1.25rem 1.25rem 1.25rem;
-    color: white;
-    font-size: 1.125rem;
-    font-style:italic;
-    
 
-    .Hero-cite{
+    justify-content: start;
+    width: 100%;
+
+
+
+  }
+}
+
+.Regiones {
+  min-height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  padding: 3.125rem;
+
+  .Regiones-svg {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.25rem;
+
+    .Regiones-nav {
+
+      .Regiones-nav-ul {
         display: flex;
-        
-        justify-content: start;
-        width: 100%;
-        
-      
+        justify-content: center;
+        align-items: center;
+        gap: 1.875rem;
 
+        .Regiones-nav-li {
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          padding: .625rem;
+
+        }
+
+        .Regiones-nav-li:hover {
+          border-radius: 1.25rem;
+          background: #ffffff;
+          box-shadow: 11px 11px 19px #a71313,
+            -11px -11px 19px #ffffff;
+        }
+
+
+
+      }
+
+    }
+
+  }
+}
+
+.Regiones-container {
+
+  min-height: 100vh;
+  width: 90%;
+  margin: 1.25rem auto 1.25rem auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  padding: 3.125rem;
+  border-radius: 1.25rem;
+
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+
+  .Region-nombre {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+
+    .Region-nombre-img {
+      width: auto;
+      height: auto;
+      max-height: 28.125rem;
+
+
+
+    }
+
+    .Region-nombre-h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: rgb(72, 72, 201);
+      text-align: center;
+      padding: 1.25rem;
     }
   }
 
-  .Regiones{
-    min-height: 100vh;
-    width: 90%;
-    margin: auto;
+  .cambio {
+    flex-direction: row-reverse;
+
+  }
+
+  .Regiones-tabs {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 3.125rem;
+    gap: 1.875rem;
+    min-height: 6.25rem;
 
-    .Regiones-svg{
-        
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 1.25rem;
+    width: 100%;
 
-        .Regiones-nav{
+    .Regiones-tabs-button {
+      font-size: 1.125rem;
+      font-weight: 600;
+      padding: 1.125rem;
+      cursor: pointer;
 
-          .Regiones-nav-ul{
+
+
+    }
+
+    .active {
+      color: rgb(72, 72, 201);
+
+    }
+
+    .active::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.25rem;
+      background-color: rgb(72, 72, 201);
+      margin-top: 0.625rem;
+
+
+    }
+
+  }
+
+  .Regiones-tabs-content {
+    padding: 1.25rem;
+
+    .Regiones-content {
+      display: none;
+      position: relative;
+
+
+
+    }
+
+    .active {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      
+     
+
+      .Regiones-content-departamentos {
+
+        .departamentos-list {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 1.25rem;
+
+
+          .departamentos-list-li {
+
+            .departamentos-list-img {
+              width: 150px;
+              height: 150px;
+              background-color: #a71313;
+            }
+
+          }
+
+
+        }
+
+        .Departamento-grande {
+          background-color: white;
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          border-radius: 20px;
+          background: #e0e0e0;
+          box-shadow: 20px 20px 28px #afafaf,
+            -20px -20px 28px #ffffff;
+          padding: 3.125rem;
+          align-items: end;
+
+          .Departamento-grande-button {
+            height: 1.875rem;
+            width: 1.875rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1.875rem;
-
-            .Regiones-nav-li{
-            
-              display: flex;
-              flex-direction: column;
-              justify-content: center ;
-              align-items: center;
-              margin: auto;
-              padding: .625rem;
-
-            }
-
-            .Regiones-nav-li:hover{
-              border-radius: 1.25rem;
-background: #ffffff;
-box-shadow:  11px 11px 19px #a71313,
-             -11px -11px 19px #ffffff;
-            }
-
 
 
           }
 
+          .Departamento-grande-button:hover {
+            background-color: #a71313;
+            color: white;
+            border-radius: .625rem;
+          }
+
+          .imagenGrandeDepartamento {
+            height: auto;
+            max-height: 21.875rem;
+            width: 43.75rem;
+            object-fit: cover;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 1.25rem;
+
+
+
+          }
         }
-        
-    }
-  }
 
-  .Regiones-container{
-  
-    min-height: 100vh;
-    width: 90%;
-    margin: 1.25rem auto 1.25rem auto;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: center;
-    text-align: center;
-    padding: 3.125rem;
-    border-radius: 1.25rem;
-    
-background: #e0e0e0;
-box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+        .isVisible {
+          display: none;
+        }
 
-             .Region-nombre{
-             
-              display: flex;
-              width: 100%;
-              justify-content: center;
-              align-items: center;
-              gap: 1.25rem;
-              
 
-              .Region-nombre-img{
-                width: auto;
-               height: auto;
-               max-height: 28.125rem;
 
-               
-               
-              }
 
-              .Region-nombre-h2{
-                font-size: 2.5rem;
-                font-weight: 600;
-                color: rgb(72, 72, 201);
-                text-align: center;
-                padding: 1.25rem;
-              }
-             }
 
-             .cambio{
-              flex-direction: row-reverse;
-
-             }
-
-    .Regiones-tabs{
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.875rem;
-      min-height: 6.25rem;
-     
-      width: 100%;
-
-      .Regiones-tabs-button{
-        font-size: 1.125rem;
-        font-weight: 600;
-        padding: 1.125rem;
-        cursor: pointer;
-        
-        
-        
       }
-      .active{
-       color: rgb(72, 72, 201);
+
+      .Carrousel {
+        width: 90%;
+        max-width: 120em;
+        border-radius: 20px;
+        background: #e0e0e0;
+        box-shadow: 20px 20px 28px #afafaf,
+          -20px -20px 28px #ffffff;
        
-      }
+        overflow-x: hidden;
 
-      .active::after{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 0.25rem;
-        background-color: rgb(72, 72, 201);
-        margin-top: 0.625rem;
-      
+        .Carrousel-grande {
+          width: 500%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
         
+          padding: 1em;
+
+          transition: all .5s ease;
+          transform: translateX(0%);
+
+
+
+          .Carrousel-imagen-info {
+            width: calc(100% / 5 - 1em);
+            border-radius: 20px;
+            background: #e0e0e0;
+            box-shadow: 20px 20px 28px #afafaf,
+              -20px -20px 28px #ffffff;
+
+            .comida-img {
+             
+             object-fit: cover;
+             width: 100%;
+             height: 25rem;
+
+
+            }
+
+          }
+        }
+
+        .puntos {
+          width: 100%;
+         
+          padding: .4em;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          margin: .3em 0 0;
+
+          .punto {
+            width: 2em;
+            height: 2em;
+            background-color: pink;
+            margin: .2em;
+            border-radius: 50%;
+
+          }
+
+          .activo{
+            background-color: lightsalmon;
+          }
+        }
       }
 
-    }
-
-    .Regiones-tabs-content{
-      padding: 1.25rem;
-
-      .Regiones-content{
-        display: none;
-
-
-
-      }
-      .active{
-        display: flex;
-        flex-flow: column nowrap;
+      .contenedor-card{
+        display:flex;
         justify-content: center;
         align-items: center;
+        gap: 3.125rem;
+       
 
-        .Regiones-content-departamentos{
-
-          .departamentos-list{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            
-            
-          }
-
+      .card {
+        width: 190px;
+        height: 254px;
+        /* background: rgb(103, 225, 255); */
+        transition: all 0.4s;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+        font-size: 30px;
+        font-weight: 900;
+        overflow: hidden;
+        margin: 1.875rem 0 0 0;
+      
+        &:hover {
+          border-radius: 15px;
+          cursor: pointer;
+          transform: scale(1.2);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+          background: rgb(103, 151, 255);
         }
+      
+        .first-content {
+          height: 100%;
+          width: 100%;
+          transition: all 0.4s;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          opacity: 1;
+          border-radius: 15px;
+          padding: .625rem;
+      
+        
+          
+          
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-      }
-    }
-
+  .imagen-carnaval{
     
   }
 
-  .Regiones-container--caribe{
-    background-color: #E5FCFF;;
+      
+          .card:hover & {
+            height: 0px;
+            opacity: 0;
+          }
+        }
 
+       
+      
+        .second-content {
+          height: 0%;
+          width: 100%;
+          opacity: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 15px;
+          transition: transform 0.4s ease;
+          font-size: 0px;
+          transform: rotate(90deg) scale(-1);
+      
+          .card:hover & {
+            opacity: 1;
+            height: 100%;
+            font-size: 1.8rem;
+            transform: rotate(0deg);
+          }
+        }
+      }
+      
+    }
+  }
   }
 
-  .Regiones-container--andesOccidentales{
-    background-color: #FFF7F9;
 
-  }
+}
 
-  .Regiones-container--pacifico{
-    background-color:#F0F4FF;
+.Regiones-container--caribe {
+  background-color: #E5FCFF;
+  ;
 
-  }
+}
 
-  .Regiones-container--antesOrientales{
-    background-color:#FFF7F9;
+.Regiones-container--andesOccidentales {
+  background-color: #FFF7F9;
 
-  }
+}
 
-  .Regiones-container--macizo{
-    background-color: #FFF9EB;
+.Regiones-container--pacifico {
+  background-color: #F0F4FF;
 
-  }
+}
 
-  .Regiones-container--amazonas{
-    background-color: #F4FFF7;;
-  }
+.Regiones-container--antesOrientales {
+  background-color: #FFF7F9;
 
+}
 
+.Regiones-container--macizo {
+  background-color: #FFF9EB;
 
-  
+}
+
+.Regiones-container--amazonas {
+  background-color: #F4FFF7;
+  ;
+}
