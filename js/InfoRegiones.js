@@ -26,8 +26,7 @@ const cerrarBotones = document.querySelectorAll('.Departamento-grande-button');
 
 departamentos.forEach((departamento) => {
     departamento.addEventListener(`click`, (e) => {
-        e.preventDefault();
-
+        
         // Encontrar el contenedor padre más cercano (Regiones-content)
         const regionContent = departamento.closest('.Regiones-content');
 
@@ -63,25 +62,66 @@ cerrarBotones.forEach((cerrar) => {
 
 
 
+
+
+
+
 document.querySelectorAll('.Regiones-content').forEach((regionContent) => {
-    const grande = regionContent.querySelector(`.Carrousel-grande`);
-    const puntos = regionContent.querySelectorAll(`.punto`);
+    const grande = regionContent.querySelector(`.Carrousel-grande`)
+    const puntos = regionContent.querySelectorAll(`.punto`)
+    const carrouselImg = regionContent.querySelectorAll(`.Carrousel-imagen-info`)
+    const numImgs = carrouselImg.length
+
+    let contador = 0;
+
+    const moverCarrousel = ()=>{
+        if (!grande) return;
+        let operacion = contador * -20
+        grande.style.transform = `translateX(${operacion}%)`;
+        puntos.forEach((_, i)=>{
+            puntos[i].classList.remove(`activo`)
+
+            if(i === contador){
+                puntos[i].classList.add(`activo`)
+            }
+
+        })
+
+    }
+
+
+
+
 
     puntos.forEach((punto, i) => {
         punto.addEventListener(`click`, () => {
-            let posicion = i;
-            let operacion = posicion * -20;
-
-            // Mover el carrusel correspondiente
-            grande.style.transform = `translateX(${operacion}%)`;
-
-            // Remover la clase 'activo' de todos los puntos en este carrusel
-            puntos.forEach((p) => {
-                p.classList.remove(`activo`);
-            });
-
-            // Agregar la clase 'activo' al punto actual
-            punto.classList.add(`activo`);
+            contador = i;
+            moverCarrousel()
         });
     });
+
+
+    const windowKeydownHandler = (e)=>{
+        const { key } = e
+
+        if(key === 'ArrowRight'){
+            contador = (contador + 1) % numImgs
+            moverCarrousel()
+        }
+
+        if (key === 'ArrowLeft') {
+            contador = (contador - 1 + numImgs) % numImgs;
+            moverCarrousel();
+        }
+
+
+
+    }
+
+    window.addEventListener(`keydown` , windowKeydownHandler )
+
+
+
+
 });
+

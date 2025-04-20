@@ -1,7 +1,7 @@
 :root {
   font-size: 100%;
   font-family: system-ui, sans-serif;
-  scroll-behavior: smooth;
+
 }
 
 *,
@@ -140,10 +140,10 @@ body {
   line-height: 1.5em;
   color: inherit;
   hyphens: auto;
-  font-smooth: always;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
 }
 
 .Hero {
@@ -171,7 +171,6 @@ body {
     width: 100%;
 
 
-
   }
 }
 
@@ -197,6 +196,7 @@ body {
 
       .Regiones-nav-ul {
         display: flex;
+        flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         gap: 1.875rem;
@@ -230,7 +230,7 @@ body {
 
 .Regiones-container {
 
-  min-height: 100vh;
+  
   width: 90%;
   margin: 1.25rem auto 1.25rem auto;
   display: flex;
@@ -255,7 +255,7 @@ body {
 
 
     .Region-nombre-img {
-      width: auto;
+      width: 60%;
       height: auto;
       max-height: 28.125rem;
 
@@ -331,8 +331,8 @@ body {
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      
-     
+
+
 
       .Regiones-content-departamentos {
 
@@ -422,7 +422,7 @@ body {
         background: #e0e0e0;
         box-shadow: 20px 20px 28px #afafaf,
           -20px -20px 28px #ffffff;
-       
+
         overflow-x: hidden;
 
         .Carrousel-grande {
@@ -431,7 +431,7 @@ body {
           flex-flow: row nowrap;
           justify-content: space-between;
           align-items: center;
-        
+
           padding: 1em;
 
           transition: all .5s ease;
@@ -447,10 +447,10 @@ body {
               -20px -20px 28px #ffffff;
 
             .comida-img {
-             
-             object-fit: cover;
-             width: 100%;
-             height: 25rem;
+
+              object-fit: cover;
+              width: 100%;
+              height: 20rem;
 
 
             }
@@ -460,7 +460,7 @@ body {
 
         .puntos {
           width: 100%;
-         
+
           padding: .4em;
           display: flex;
           flex-flow: row nowrap;
@@ -477,102 +477,101 @@ body {
 
           }
 
-          .activo{
+          .activo {
             background-color: lightsalmon;
           }
         }
       }
 
-      .contenedor-card{
-        display:flex;
+      .contenedor-card {
+        display: flex;
+        flex-flow: row wrap;
         justify-content: center;
         align-items: center;
         gap: 3.125rem;
-       
 
-      .card {
-        width: 190px;
-        height: 254px;
-        /* background: rgb(103, 225, 255); */
-        transition: all 0.4s;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-        font-size: 30px;
-        font-weight: 900;
-        overflow: hidden;
-        margin: 1.875rem 0 0 0;
-      
-        &:hover {
-          border-radius: 15px;
-          cursor: pointer;
-          transform: scale(1.2);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-          background: rgb(103, 151, 255);
-        }
-      
-        .first-content {
-          height: 100%;
-          width: 100%;
+
+        .card {
+          width: 190px;
+          height: 254px;
+          /* background: rgb(103, 225, 255); */
           transition: all 0.4s;
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: space-between;
-          align-items: center;
-          opacity: 1;
-          border-radius: 15px;
-          padding: .625rem;
-      
-        
-          
-          
-          background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+          font-size: 30px;
+          font-weight: 900;
+          overflow: hidden;
+          margin: 1.875rem 0 0 0;
 
-  .imagen-carnaval{
-    
-  }
-
-      
-          .card:hover & {
-            height: 0px;
-            opacity: 0;
+          &:hover {
+            border-radius: 15px;
+            cursor: pointer;
+            transform: scale(1.2);
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+            background: rgb(103, 151, 255);
           }
-        }
 
-       
-      
-        .second-content {
-          height: 0%;
-          width: 100%;
-          opacity: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 15px;
-          transition: transform 0.4s ease;
-          font-size: 0px;
-          transform: rotate(90deg) scale(-1);
-      
-          .card:hover & {
-            opacity: 1;
+          .first-content {
             height: 100%;
-            font-size: 1.8rem;
-            transform: rotate(0deg);
+            width: 100%;
+            transition: all 0.4s;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 1;
+            border-radius: 15px;
+            padding: .625rem;
+
+
+
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            .imagen-carnaval {}
+
+
+            .card:hover & {
+              height: 0px;
+              opacity: 0;
+            }
+          }
+
+
+
+          .second-content {
+            height: 0%;
+            width: 100%;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            transition: transform 0.4s ease;
+            font-size: 0px;
+            transform: rotate(90deg) scale(-1);
+
+            .card:hover & {
+              opacity: 1;
+              height: 100%;
+              font-size: 1.8rem;
+              transform: rotate(0deg);
+            }
           }
         }
+
       }
-      
     }
   }
-  }
+
 
 
 }
 
 .Regiones-container--caribe {
   background-color: #E5FCFF;
-  ;
 
 }
 
@@ -599,4 +598,92 @@ body {
 .Regiones-container--amazonas {
   background-color: #F4FFF7;
   ;
+}
+
+@media (max-width: 900px) {
+  .Regiones-container {
+     .Regiones-tabs-content {
+         .active {
+             .Carrousel {
+                 .Carrousel-grande {
+                     .Carrousel-imagen-info {
+                        .comida-img {
+                            height: 18rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+@media (max-width: 800px) {
+
+   
+
+  .Regiones-container {
+      .Regiones-tabs {
+          gap: 1.075rem;
+      }
+
+      .Regiones-tabs-content {
+        .active {
+            .Carrousel {
+                .Carrousel-grande {
+                    .Carrousel-imagen-info {
+                       .comida-img {
+                           height: 12rem;
+                       }
+                   }
+               }
+           }
+       }
+   }
+  
+    .Region-nombre {
+        .Region-nombre-img {
+            width: 50%;
+        }
+    }
+}
+  
+}
+
+@media (max-width: 700px) {
+  .Regiones-container {
+    .Region-nombre {
+        flex-direction: column;
+    }
+}
+  
+}
+
+@media (max-width: 600px) {
+  .Regiones{
+    width: 100%;
+  }
+
+  .Regiones-container{
+    width: 100%;
+
+    .Regiones-tabs {
+      .Regiones-tabs-button {
+          font-size: 0.85rem;
+          
+      }
+  }
+  }
+  
+}
+
+@media (max-width: 500px) {
+  .Regiones-container {
+    .Regiones-tabs {
+        flex-flow: row wrap;
+        justify-content: center;
+       
+    }
+}
+  
 }
