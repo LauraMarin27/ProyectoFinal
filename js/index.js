@@ -66,6 +66,25 @@ const infoSuperior = document.querySelectorAll(`.Info-superior`)
 const botonCerrar = document.querySelectorAll(`.Info-superior-cerrar`)
 
 
+let callback = (cambios, observer)=>{
+    cambios.forEach((entry)=>{
+        let {isIntersecting,target} = entry
+
+        if(isIntersecting){
+            target.classList.add(`isVisible`)
+        }
+    })
+}
+
+let options = {
+    threshold : .5
+}
+
+let observer = new IntersectionObserver(callback,options)
+
+infoEspecifica.forEach((eachElemento)=>{
+    observer.observe(eachElemento)
+})
 
 
 infoEspecifica.forEach((_,i)=>{

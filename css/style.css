@@ -3,6 +3,7 @@
   font-family: system-ui, sans-serif;
   scroll-behavior: smooth;
 }
+
 *,
 *::before,
 *::after {
@@ -12,10 +13,12 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
+
 *::before,
 *::after {
   display: block;
 }
+
 img,
 picture,
 video,
@@ -29,12 +32,14 @@ canvas {
   object-fit: cover;
   object-position: center center;
 }
+
 a {
   display: block;
   text-decoration: none;
   color: inherit;
   font: inherit;
 }
+
 p a {
   display: inline;
 }
@@ -65,15 +70,18 @@ del {
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
+
 mark {
   background-color: transparent;
 }
+
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
   content: none;
 }
+
 form,
 input,
 textarea,
@@ -87,16 +95,20 @@ label {
   display: block;
   appearance: none;
 }
+
 fieldset {
   border: none;
 }
+
 ::placeholder {
   color: unset;
 }
+
 button,
 label {
   cursor: pointer;
 }
+
 table,
 tr,
 td,
@@ -108,11 +120,13 @@ tfoot {
   border-spacing: 0;
   font: inherit;
 }
+
 svg {
   width: 100%;
   display: block;
   fill: currentColor;
 }
+
 body {
   min-height: 100vh;
   line-height: 1.5em;
@@ -120,12 +134,25 @@ body {
   hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
+
   -moz-osx-font-smoothing: grayscale;
 }
 
 .body--no-scroll {
   overflow: hidden;
 }
+
+:root {
+  
+  --color-primario: rgb(252, 209, 22); 
+  --color-secundario: rgb(0, 56, 168);
+  --color-terciario: rgb(206, 17, 38);  
+  --color-fondo: #f9f9f9;
+  --color-texto: #000; 
+  --font-decorativa: "Kaushan Script", cursive;
+  --sombra: 0 0 2rem rgba(0, 0, 0, 0.2);
+}
+
 
 
 
@@ -143,7 +170,7 @@ body {
   gap: 2rem;
 
   .Hero-h1 {
-    font-family: "Kaushan Script", cursive;
+    font-family: var(--font-decorativa);
     font-weight: 400;
     font-size: 9.375rem;
     min-height: 30vh;
@@ -151,34 +178,49 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    transform: rotate(-15deg);
+    color: var(--color-fondo);
+
     -webkit-text-stroke: 3px rgb(9, 16, 39);
     margin-bottom: 1.25rem;
+
+    animation: upDown 5s ease 0s infinite both;
   }
 
+
+
   .Hero-carrousel {
-   
+
     max-width: 600px;
-    background-color: white;
+    background-color: var(--color-fondo);
     margin: auto;
     border-radius: 1rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2rem var(--sombra);
     position: relative;
     overflow: hidden;
     scroll-snap-type: x mandatory;
 
     .Hero-imagenes {
-      /* background-color: blueviolet; */
       min-height: 200px;
       display: grid;
 
+
       .Hero-img {
         height: 300px;
-       
+
         scroll-snap-align: center;
-        transition: opacity 0.6s ease, scale 0.6s ease;
+        transition: scale 0.6s ease;
+
       }
+
+      .Hero-img:hover {
+
+        scale: 1.2;
+
+
+      }
+
+
+
     }
 
     .Hero-arrows {
@@ -186,33 +228,34 @@ body {
       gap: 3rem;
       justify-content: center;
       align-items: center;
-      
-     
+
+
 
       .Hero-arrow {
         --size: 3rem;
         width: var(--size);
         height: var(--size);
-       
+
         position: absolute;
- 
-        background-color: white;
+
+        background-color: var(--color-fondo);
         width: fit-content;
 
         border-radius: 1rem;
         top: 50%;
         margin: auto 20px;
-      
+
 
         cursor: pointer;
       }
 
       .Hero-arrow--prev {
         left: 0;
-        
-      
+
+
 
       }
+
       .Hero-arrow--next {
         right: 0;
       }
@@ -225,7 +268,7 @@ body {
 
   padding: 3.125rem;
 
- 
+
   .Regiones {
     display: flex;
     justify-content: center;
@@ -236,32 +279,32 @@ body {
     position: relative;
 
 
-    .Lugar-mapa{
+    .Lugar-mapa {
       position: absolute;
-        
-        padding: 1.25rem;
-       
-        pointer-events: none;
-        z-index: 1000;
-        top: 0;
-        right: 0;
-        display: flex;
 
-        .mapa{
-          width: 1.875rem;
-          height: 1.875rem;
-        }
+      padding: 1.25rem;
+
+      pointer-events: none;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      display: flex;
+
+      .mapa {
+        width: 1.875rem;
+        height: 1.875rem;
+      }
 
       .modal-titulo {
         font-size: 20px;
-      
-        
+
+
       }
 
     }
-  
 
-    .Departamento{
+
+    .Departamento {
       width: 30%;
       min-height: 40vh;
       display: flex;
@@ -269,22 +312,28 @@ body {
       justify-content: center;
       align-items: center;
       border-radius: 50px;
+      transition: scale .6s ease;
       background: #e0e0e0;
-      box-shadow:  -26px -26px 51px #989898,
-                   26px 26px 51px #ffffff;
+      box-shadow: -26px -26px 51px #989898,
+        26px 26px 51px #ffffff;
+
+
 
       .Departamento-img {
-        background-color: purple;
+       
         width: 100%;
         height: 50vh;
         border-top-right-radius: 1.25rem;
         border-top-left-radius: 1.25rem;
         object-fit: cover;
-        
-  
+
+
+
       }
 
-      .Departamento-descripcion{
+
+
+      .Departamento-descripcion {
         width: 100%;
         min-height: 20vh;
         display: flex;
@@ -292,42 +341,55 @@ body {
         justify-content: center;
         gap: .5rem;
         padding: 1.25rem;
-        color: black;
-        border: black 1px solid;
+        color: var(--color-texto);
+        border: var(--color-texto) 1px solid;
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
 
-        .Capital{
+        .Capital {
           display: flex;
           flex-flow: column wrap;
           justify-content: center;
-          
-          
+
+
         }
-        
+
       }
+    }
+
+    .Departamento:hover {
+      scale: 1.1;
+
+
     }
 
     .Destinos-mapa {
       display: flex;
       justify-content: center;
       align-items: center;
-      
-     
+
+
       .mapsvg-svg {
         path {
-          fill:  #0057B7;
+          fill: var(--color-secundario);
+          transition: opacity 0.6s ease;
+
         }
+
+        path:hover {
+          fill: var(--color-primario);
+        }
+
         .departamento--activo {
-          fill: #2ecc71;
-          cursor: pointer; 
+          fill: var(--color-terciario);
+          cursor: pointer;
+          opacity: 0.7;
         }
       }
     }
   }
 
-  .Regiones-info{
-    background-color: blueviolet;
+  .Regiones-info {
     width: 100%;
     min-height: 80vh;
     display: none;
@@ -336,26 +398,25 @@ body {
 
 .Info {
 
-  border-radius: 50px;
-background: #FFDD57;
-box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+  background: var(--color-primario);
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px var(--color-fondo);
   margin: 1.25rem 0 0 0;
   border-radius: 1.25rem;
 
   min-height: 100vh;
   width: 100%;
-  
+
   padding: 3.125rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   position: relative;
- 
 
 
-  
+
+
 
   .Info-util {
     display: grid;
@@ -365,7 +426,8 @@ box-shadow:  20px 20px 60px #bebebe,
     justify-content: center;
 
     .Info-especifica {
-      /* background-color: blueviolet; */
+      opacity: 0;
+      transform: translateY(50px);
       min-height: 30vh;
       width: 100%;
       display: flex;
@@ -373,22 +435,38 @@ box-shadow:  20px 20px 60px #bebebe,
       justify-content: center;
       align-items: center;
       text-align: center;
-     
+
       z-index: 1;
+      transition: scale .5s ease, opacity .5s ease, transform 0.5s ease;
 
       .Info-img {
         width: 6.25rem;
         height: 6.25rem;
         object-fit: cover;
 
+
       }
+
+
     }
 
-    .Info-superior{
+    .isVisible {
+      opacity: 1;
+      transform: translateY(0);
+
+
+    }
+
+    .Info-especifica:hover {
+
+      scale: 1.2;
+    }
+
+    .Info-superior {
       opacity: 0;
-      background-color: #f9f9f9;
+      background-color: var(--color-fondo);
       border-radius: .625rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px var(--sombra);
       padding: 2rem;
       width: 90%;
       max-height: 90%;
@@ -398,88 +476,105 @@ box-shadow:  20px 20px 60px #bebebe,
       justify-content: start;
       align-items: center;
       margin: auto;
-      
-     top: 50%;
-     left: 50%;
-    transform: translate(-50%, -50%);
-  
-    overflow-y: auto;
-   
-      
 
-      .Info-superior-titulo{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      overflow-y: auto;
+
+
+
+      .Info-superior-titulo {
         display: flex;
         gap: 1.25rem;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        background-color: white;
+        background-color: var(--color-fondo);
         border-radius: 50px;
-        
-        
-        
-        .Info-superior-h2{
+
+
+
+        .Info-superior-h2 {
           font-size: 1.8rem;
           font-weight: bold;
-         
+
           margin-bottom: .9375rem 0 .9375rem 0;
 
         }
-        
-        .Info-superior-cerrar{
+
+        .Info-superior-cerrar {
           padding: 1.25rem;
           display: flex;
           justify-content: center;
           align-items: center;
+          transition: color .4s ease;
+        }
+
+        .Info-superior-cerrar:hover {
+          color: var(--color-terciario);
         }
 
       }
 
-      
 
-      .Info-superior-llegar-transportarse{
+
+      .Info-superior-llegar-transportarse {
         display: flex;
         width: 100%;
         justify-content: space-evenly;
         align-items: start;
         gap: 1.25rem;
         padding: .625rem;
-       
-        
 
-        .Cultura-img{
+
+
+        .Cultura-img {
           max-height: 11.25rem;
           width: 50%;
           object-fit: cover;
           border-radius: 1.25rem;
           margin: .625rem 0 0 0;
+          transition: scale .5s ease;
         }
 
-        .Imperdibles-img{
+        .Cultura-img:hover {
+          scale: 0.9;
+        }
+
+        .Imperdibles-img {
           max-height: 11.25rem;
           width: 100%;
           object-fit: cover;
           border-radius: 1.25rem;
           margin: .625rem 0 0 0;
           max-width: 25rem;
+          transition: scale .6s ease;
 
         }
 
-        
+        .Imperdibles-img:hover {
+          scale: 0.9;
+        }
 
-        .Bebidas-postres{
-         
+
+
+        .Bebidas-postres {
+
           min-height: 12.5rem;
           display: flex;
           gap: 2rem;
           margin: 1.25rem 0 0 0;
           width: 50%;
-          .Postres-img{
-           max-height: 11.25rem;
+
+          .Postres-img {
+            max-height: 11.25rem;
             object-fit: cover;
             border-radius: 1.25rem;
           }
-          .Bebidas-img{
+
+          .Bebidas-img {
             max-height: 11.25rem;
             object-fit: cover;
             border-radius: 1.25rem;
@@ -488,7 +583,7 @@ box-shadow:  20px 20px 60px #bebebe,
 
       }
 
-     
+
 
 
     }
@@ -496,7 +591,7 @@ box-shadow:  20px 20px 60px #bebebe,
     .Info-superior--visible {
       opacity: 1;
       z-index: 2;
-      
+
     }
   }
 }
@@ -509,125 +604,142 @@ box-shadow:  20px 20px 60px #bebebe,
 @media (max-width: 1100px) {
   .Destinos {
     .Regiones {
-        .Departamento {
-            width: 40%;
-        }
+      .Departamento {
+        width: 40%;
+      }
     }
-}
-  
+  }
+
 }
 
 @media (max-width: 1000px) {
   .Info {
-    & .Info-util {
-        .Info-superior {
-            width: 100%;
-        }
+    .Info-util {
+      .Info-superior {
+        width: 100%;
+      }
     }
-}
+  }
 }
 
 @media (max-width: 900px) {
-  
 
-  .Hero{
+
+  .Hero {
     flex-direction: column;
-    
+
   }
 
   .Destinos {
     .Regiones {
       flex-direction: column-reverse;
+
       .Departamento {
         width: 70%;
+      }
     }
-    }
-}
+  }
 }
 
 @media (max-width: 800px) {
   .Info {
-     .Info-util {
-        & .Info-superior {
-            .Info-superior-llegar-transportarse {
-              flex-direction: column;
-              width: 100%;
-              
-              .Info-superior-llegar-ul {
-                width: 100%;
-              }
-            }
+    .Info-util {
+       .Info-superior {
+        .Info-superior-llegar-transportarse {
+          flex-direction: column;
+          width: 100%;
+
+          .Info-superior-llegar-ul {
+            width: 100%;
+          }
         }
+      }
     }
-}
+  }
 }
 
 @media (max-width: 700px) {
   .Hero {
     .Hero-h1 {
-       
-        font-size: 6.25rem;
-      
-    }
-}
 
-h1 {
-
-  .Info {
-    .Info-util {
-      grid-template-columns: repeat(2, 1fr);
+      font-size: 6.25rem;
 
     }
-}
+  }
+
+  h1 {
+
+    .Info {
+      .Info-util {
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+    }
 
 
-}
+  }
 
-@media (max-width: 500px) {
-  .Hero {
-    .Hero-h1 {
+  @media (max-width: 500px) {
+    .Hero {
+      .Hero-h1 {
         font-size: 4rem;
         min-height: 30vh;
-       
-    }
-}
 
-.Destinos {
-  .Regiones {
-      .Destinos-mapa {
+      }
+    }
+
+    .Destinos {
+      .Regiones {
+        .Destinos-mapa {
           max-height: 400px;
+        }
+
+        .Departamento {
+          width: 90%;
+        }
+      }
+    }
+
+    .Info {
+      .Info-util {
+        grid-template-columns: 1fr;
+
+        .Info-superior {
+          height: 100%;
+
+        }
+
       }
 
-      .Departamento {
-        width: 90%;
     }
   }
-}
-
-.Info {
-  .Info-util {
-      grid-template-columns: 1fr;
-
-            .Info-superior {
-              height: 100%;
-                
-            }
-        
-}
-     
-  }
-}
 }
 
 @media (max-width: 320px) {
   .Hero {
     .Hero-h1 {
-        font-size: 5.375rem;
-        min-height: 30vh;
+      font-size: 5.375rem;
+      min-height: 30vh;
     }
+  }
 }
+
+
+@keyframes upDown {
+
+  0% {
+    transform: translateY(.625rem) rotate(-15deg);
+
+  }
+
+  50% {
+    transform: translateY(-0.625rem) rotate(-15deg);
+
+  }
+
+  100% {
+    transform: translateY(.625rem) rotate(-15deg);
+
+  }
+
 }
-
-
-
-

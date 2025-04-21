@@ -77,15 +77,21 @@
     fill : currentColor;
   }
 
+  :root {
+    --color-negro: #000000;
+    --color-gris-claro: #ccc;
+   
+  }
+
 
   body {
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #000000;
+    color: var(--color-negro);
   }
   
-  /* Títulos */
+
   h1 {
     font-family: 'Yeseva One', cursive;
     font-size: 3rem;
@@ -120,7 +126,7 @@
   }
 
   .Header {
-    /* background-color: rgb(147, 241, 163); */
+
     min-height: 15vh;
     width: 100%;
     display: flex;
@@ -129,7 +135,7 @@
     justify-content: space-between;
   
     .Header-logo {
-      /* background-color: blueviolet; */
+   
       margin: 0 0 0 3.125rem;
     }
   
@@ -139,7 +145,7 @@
   
     .Header-nav {
       .Header-ul {
-        /* background-color: aquamarine; */
+   
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
@@ -232,7 +238,7 @@
       content: "";
       width: 50%;
       height: 2px;
-      background-color: #ccc;
+      background-color: var(--color-gris-claro);
       margin: 0 20px;
    
     }
