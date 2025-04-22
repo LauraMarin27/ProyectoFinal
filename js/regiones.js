@@ -13,9 +13,10 @@
  *  Estructura:
  *   – Constantes
  *   – Eventos de hover y click
- *   -
+ *  
 \* ──────────────────────────────────────────────────────────────── */
 
+/* ──────────────── INFORMACIÓN DEPARTAMENTOS ──────────────── */
 /**
  * Objeto que contiene la información de cada departamento de Colombia.
  * @typedef {Object} Departamento
@@ -254,67 +255,70 @@ const regionesInfo = {
     }
 }
 
-const infoDepartamento = document.querySelector(`Departamento`)
+//Elemento encapsulador de la información de imagen-descripción del departamento
+const infoDepartamento = document.querySelector(`.Departamento`)
 // Elemento que muestra el nombre del departamento
-const nombreDepartamento = document.querySelector(`.Departamento-h3`)
+const nombreDepartamento = infoDepartamento.querySelector(`.Departamento-h3`)
 // Elemento que muestra el clima del departamento
-const climaDepartamento = document.querySelector(`.Departamento-clima`)
+const climaDepartamento = infoDepartamento.querySelector(`.Departamento-clima`)
 // Elemento que muestra la descripción del departamento
-const descripcionDepartamento = document.querySelector(`.Departamento-p`)
+const descripcionDepartamento = infoDepartamento.querySelector(`.Departamento-p`)
+// Imagen que cambia según el departamento seleccionado
+const imagenMapa = infoDepartamento.querySelector(`.Departamento-img`)
+// Título que muestra la capital del departamento
+const capital = infoDepartamento.querySelector(`.Capital-h4`)
+// Frase destacada de la capital del departamento
+const fraseCapital = infoDepartamento.querySelector(`.Capital-p`)
 // Selección de los departamentos en los que se haga click dentro del mapa
 const regiones = document.querySelectorAll(`.departamento`)
-// Imagen que cambia según el departamento seleccionado
-const imagenMapa = document.querySelector(`.Departamento-img`)
-// Título que muestra la capital del departamento
-const capital = document.querySelector(`.Capital-h4`)
-// Frase destacada de la capital del departamento
-const fraseCapital = document.querySelector(`.Capital-p`)
 // Nombre del departamento que se actualiza al pasar el ratón por encima
-const modalTitulo = document.querySelector('.modal-titulo');
+const modalTitulo = document.querySelector('.modal-titulo')
 
-regiones.forEach((_, i)=>{
+
+/* ──────────────── EVENTOS: HOVER Y CLICK EN DEPARTAMENTOS ──────────────── */
+regiones.forEach((_, i) => {
     /**
    * Evento que actualiza el título del modal al pasar el mouse por un departamento
    * @param {MouseEvent} e Evento del mouse
    * @return {undefined} No tiene return
    */
-    regiones[i].addEventListener(`mouseover`, ()=>{
+    regiones[i].addEventListener(`mouseover`, () => {
         const tituloDepartamento = regiones[i].getAttribute(`id`)
-        modalTitulo.innerText = tituloDepartamento;
+        modalTitulo.innerText = tituloDepartamento
     }
     )
 
-     /**
-   * Evento que activa un departamento al hacer clic y actualiza la información del departamento
-   * @param {MouseEvent} e Evento del click
-   * @return {undefined} No tiene return
-   */
-    regiones[i].addEventListener(`click`, ()=>{
+    /**
+  * Evento que activa un departamento al hacer clic y actualiza la información del departamento
+  * @param {MouseEvent} e Evento del click
+  * @return {undefined} No tiene return
+  */
+    regiones[i].addEventListener(`click`, () => {
         // Elimina la clase activa de todas las regiones
-        regiones.forEach((_, j)=>{
+        regiones.forEach((_, j) => {
             regiones[j].classList.remove(`departamento--activo`)
         })
-          // Añade la clase activa a la región clicada
+        // Añade la clase activa a la región clicada
         regiones[i].classList.add(`departamento--activo`)
         // Obtiene el ID del departamento seleccionado
         const tituloDepartamento = regiones[i].getAttribute(`id`)
-       //Actualiza la imagen del mapa con el departamento seleccionado
-        imagenMapa.alt = tituloDepartamento;
-       imagenMapa.src = `./assets/${tituloDepartamento}.webp`;
+        //Actualiza la imagen del mapa con el departamento seleccionado
+        imagenMapa.alt = tituloDepartamento
+        imagenMapa.src = `./assets/${tituloDepartamento}.webp`
         // Busca la información correspondiente a ese departamento en el objeto regionesInfo
-       const regionData = regionesInfo[tituloDepartamento];
+        const regionData = regionesInfo[tituloDepartamento]
         if (regionData) {
-            nombreDepartamento.innerText = regionData.h3;
-            climaDepartamento.innerText = regionData.clima;
-            descripcionDepartamento.innerText = regionData.descripcion;
-            capital.innerText = regionData.capital;
-            fraseCapital.innerText = regionData.fraseCapital;
+            nombreDepartamento.innerText = regionData.h3
+            climaDepartamento.innerText = regionData.clima
+            descripcionDepartamento.innerText = regionData.descripcion
+            capital.innerText = regionData.capital
+            fraseCapital.innerText = regionData.fraseCapital
         } else {
-            nombreDepartamento.innerText = tituloDepartamento || "Región desconocida";
-            climaDepartamento.innerText = "Clima: Información no disponible";
-            descripcionDepartamento.innerText = "Descripción: Información no disponible.";
-            capital.innerText = "Capital: Información no disponible";
-            fraseCapital.innerText = "Frase: Información no disponible.";
-        }  
+            nombreDepartamento.innerText = tituloDepartamento || "Región desconocida"
+            climaDepartamento.innerText = "Clima: Información no disponible"
+            descripcionDepartamento.innerText = "Descripción: Información no disponible."
+            capital.innerText = "Capital: Información no disponible"
+            fraseCapital.innerText = "Frase: Información no disponible."
+        }
     })
 })

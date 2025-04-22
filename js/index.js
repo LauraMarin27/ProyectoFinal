@@ -1,5 +1,4 @@
 'use strict'
-
 /* ──────────────────────────────────────────────────────────────── *\
  *  index.js
  * 
@@ -63,7 +62,7 @@ carrouselWrapper.style.gridTemplateColumns = `repeat( ${numImgs} , 1fr )`
  * @author LauraMarin
  * @since 1.0.0
  */
-const carrouselWrapperMove = () =>{
+const carrouselWrapperMove = () => {
     carrouselWrapper.style.translate = `-${(100 / numImgs) * contador}%`
 }
 
@@ -76,13 +75,13 @@ const carrouselWrapperMove = () =>{
  * @author LauraMarin
  * @since 1.0.0
  */
-const carrouselNextHandler = () =>{
+const carrouselNextHandler = () => {
     contador++
     if (contador >= numImgs) {
         contador = 0
     }
     carrouselWrapperMove()
-   
+
 
 }
 
@@ -94,13 +93,13 @@ const carrouselNextHandler = () =>{
  * @author LauraMarin
  * @since 1.0.0
  */
-const carrouselPrevHandler = () =>{
+const carrouselPrevHandler = () => {
     contador--
     if (contador < 0) {
         contador = numImgs - 1
     }
     carrouselWrapperMove()
-    
+
 }
 
 /**
@@ -112,16 +111,16 @@ const carrouselPrevHandler = () =>{
  * @author LauraMarin
  * @since 1.0.0
  */
-const windowKeydownHandler = ( e )=>{
+const windowKeydownHandler = (e) => {
     const { key } = e
-    
+
     key == 'ArrowRight' && carrouselNextHandler()
-    key == 'ArrowLeft'  && carrouselPrevHandler()
-    
-    if( key == 0 || key == 1 || key == 2 || key == 3 || key == 4 || key == 5 || key == 6 || key == 7 || key == 8 || key == 9 ){
+    key == 'ArrowLeft' && carrouselPrevHandler()
+
+    if (key == 0 || key == 1 || key == 2 || key == 3 || key == 4 || key == 5 || key == 6 || key == 7 || key == 8 || key == 9) {
         contador = key - 1
         carrouselWrapperMove()
-        
+
     }
 
 }
@@ -132,19 +131,19 @@ const windowKeydownHandler = ( e )=>{
  * @param {MouseEvent} e Evento de clic
  * @return {undefined} No tiene return
  */
-carrouselNext.addEventListener(`click` , carrouselNextHandler )
+carrouselNext.addEventListener(`click`, carrouselNextHandler)
 /**
  * Evento que ejecuta el handler para ir a la imagen anterior del carrousel
  * @param {MouseEvent} e Evento de clic
  * @return {undefined} No tiene return
  */
-carrouselPrev.addEventListener(`click` , carrouselPrevHandler )
+carrouselPrev.addEventListener(`click`, carrouselPrevHandler)
 /**
  * Evento que escucha las teclas para navegar por el carrousel
  * @param {KeyboardEvent} e Evento de teclado
  * @return {undefined} No tiene return
  */
-window.addEventListener(`keydown` , windowKeydownHandler )
+window.addEventListener(`keydown`, windowKeydownHandler)
 
 /* ──────────────── INFORMACIÓN UTIL DE COLOMBIA  ──────────────── */
 
@@ -169,10 +168,10 @@ const botonCerrar = info.querySelectorAll(`.Info-superior-cerrar`)
  * @author LauraMarin
  * @since 1.0.0
  */
-let callback = (cambios, observer)=>{
-    cambios.forEach((entry)=>{
-        let {isIntersecting,target} = entry
-        if(isIntersecting){
+let callback = (cambios, observer) => {
+    cambios.forEach((entry) => {
+        let { isIntersecting, target } = entry
+        if (isIntersecting) {
             target.classList.add(`isVisible`)
         }
     })
@@ -180,13 +179,13 @@ let callback = (cambios, observer)=>{
 
 // visible al 50%
 let options = {
-    threshold : .5
+    threshold: .5
 }
 
-let observer = new IntersectionObserver(callback,options)
+let observer = new IntersectionObserver(callback, options)
 
 // Observa cada uno de los elementos específicos de información
-infoEspecifica.forEach(eachElemento => observer.observe(eachElemento));
+infoEspecifica.forEach(eachElemento => observer.observe(eachElemento))
 
 // 3. Listeners para abrir/cerrar info
 /**
@@ -194,17 +193,17 @@ infoEspecifica.forEach(eachElemento => observer.observe(eachElemento));
  * @param {MouseEvent} e Evento de clic
  * @return {undefined} No tiene return
  */
-infoEspecifica.forEach((_,i)=>{
-    infoEspecifica[i].addEventListener(`click`,()=>{
-         infoSuperior[i].classList.add(`Info-superior--visible`)
-        
+infoEspecifica.forEach((_, i) => {
+    infoEspecifica[i].addEventListener(`click`, () => {
+        infoSuperior[i].classList.add(`Info-superior--visible`)
+
         /**
          * Evento que cierra la información detallada al hacer clic en el botón cerrar
          * @param {MouseEvent} e Evento de clic
          * @return {undefined} No tiene return
          */
-         if(botonCerrar[i]){
-            botonCerrar[i].addEventListener(`click`,()=>{
+        if (botonCerrar[i]) {
+            botonCerrar[i].addEventListener(`click`, () => {
                 infoSuperior[i].classList.remove(`Info-superior--visible`)
             })
         }

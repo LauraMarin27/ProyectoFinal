@@ -492,6 +492,7 @@ body {
             background-color: var(--color-amarillo-colombia);
             margin: .2em;
             border-radius: 50%;
+            cursor: pointer;
 
           }
 

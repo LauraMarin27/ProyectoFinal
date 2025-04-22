@@ -31,10 +31,10 @@ const body = header.querySelector(`body`)
  * @param {MouseEvent} e Evento de clic
  * @return {undefined} No tiene return
  */
-menuAbrir.addEventListener(`click`, ()=>{
+menuAbrir.addEventListener(`click`, () => {
     nav.classList.add(`Header-nav--visible`)
     body.classList.add(`body--no-scroll`)
-    
+
 })
 
 /**
@@ -42,7 +42,7 @@ menuAbrir.addEventListener(`click`, ()=>{
  * @param {MouseEvent} e Evento de clic
  * @return {undefined} No tiene return
  */
-menuCerrar.addEventListener(`click`, ()=>{
+menuCerrar.addEventListener(`click`, () => {
     nav.classList.remove(`Header-nav--visible`)
     body.classList.remove(`body--no-scroll`)
 })
