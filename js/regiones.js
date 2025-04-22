@@ -1,4 +1,32 @@
 'use strict'
+
+/* ──────────────────────────────────────────────────────────────── *\
+ *  regiones.js
+ * 
+ *  Interacciones:
+ *   – Mostrar nombre del departamento al hacer hover en el mapa
+ *   – Cambiar información del departamento al hacer click sobre uno dentro del mapa
+ * 
+ *  Datos:
+ *   – Objeto regionesInfo con información de cada departamento
+ * 
+ *  Estructura:
+ *   – Constantes
+ *   – Eventos de hover y click
+ *   -
+\* ──────────────────────────────────────────────────────────────── */
+
+/**
+ * Objeto que contiene la información de cada departamento de Colombia.
+ * @typedef {Object} Departamento
+ * @property {string} h3 - Nombre del departamento.
+ * @property {string} clima - Descripción del clima del departamento.
+ * @property {string} descripcion - Texto descriptivo del departamento.
+ * @property {string} capital - Nombre de la capital del departamento.
+ * @property {string} fraseCapital - Frase destacada de la capital.
+ * 
+ * @type {Object.<string, Departamento>}
+ */
 const regionesInfo = {
     Amazonas: {
         h3: "Amazonas",
@@ -226,38 +254,54 @@ const regionesInfo = {
     }
 }
 
-
-
-
+const infoDepartamento = document.querySelector(`Departamento`)
+// Elemento que muestra el nombre del departamento
 const nombreDepartamento = document.querySelector(`.Departamento-h3`)
+// Elemento que muestra el clima del departamento
 const climaDepartamento = document.querySelector(`.Departamento-clima`)
+// Elemento que muestra la descripción del departamento
 const descripcionDepartamento = document.querySelector(`.Departamento-p`)
+// Selección de los departamentos en los que se haga click dentro del mapa
 const regiones = document.querySelectorAll(`.departamento`)
+// Imagen que cambia según el departamento seleccionado
 const imagenMapa = document.querySelector(`.Departamento-img`)
+// Título que muestra la capital del departamento
 const capital = document.querySelector(`.Capital-h4`)
+// Frase destacada de la capital del departamento
 const fraseCapital = document.querySelector(`.Capital-p`)
+// Nombre del departamento que se actualiza al pasar el ratón por encima
 const modalTitulo = document.querySelector('.modal-titulo');
-console.log("modal titulo",modalTitulo)
 
 regiones.forEach((_, i)=>{
-
+    /**
+   * Evento que actualiza el título del modal al pasar el mouse por un departamento
+   * @param {MouseEvent} e Evento del mouse
+   * @return {undefined} No tiene return
+   */
     regiones[i].addEventListener(`mouseover`, ()=>{
         const tituloDepartamento = regiones[i].getAttribute(`id`)
         modalTitulo.innerText = tituloDepartamento;
     }
     )
 
-
+     /**
+   * Evento que activa un departamento al hacer clic y actualiza la información del departamento
+   * @param {MouseEvent} e Evento del click
+   * @return {undefined} No tiene return
+   */
     regiones[i].addEventListener(`click`, ()=>{
+        // Elimina la clase activa de todas las regiones
         regiones.forEach((_, j)=>{
             regiones[j].classList.remove(`departamento--activo`)
         })
-
+          // Añade la clase activa a la región clicada
         regiones[i].classList.add(`departamento--activo`)
-
+        // Obtiene el ID del departamento seleccionado
         const tituloDepartamento = regiones[i].getAttribute(`id`)
-       imagenMapa.alt = tituloDepartamento;
+       //Actualiza la imagen del mapa con el departamento seleccionado
+        imagenMapa.alt = tituloDepartamento;
        imagenMapa.src = `./assets/${tituloDepartamento}.webp`;
+        // Busca la información correspondiente a ese departamento en el objeto regionesInfo
        const regionData = regionesInfo[tituloDepartamento];
         if (regionData) {
             nombreDepartamento.innerText = regionData.h3;
@@ -271,8 +315,6 @@ regiones.forEach((_, i)=>{
             descripcionDepartamento.innerText = "Descripción: Información no disponible.";
             capital.innerText = "Capital: Información no disponible";
             fraseCapital.innerText = "Frase: Información no disponible.";
-        }
-        
+        }  
     })
-
 })
