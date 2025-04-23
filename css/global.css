@@ -141,6 +141,7 @@
   
     .Header-abrir {
       display: none;
+    
     }
   
     .Header-nav {
@@ -275,6 +276,7 @@
   
         .Header-cerrar {
           display: flex;
+          padding: .9375rem;
         }
         .Header-ul {
           display: flex;

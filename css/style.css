@@ -157,7 +157,7 @@ body {
 
 
 .Hero {
-  background-image: url(../assets/Hero-img.webp);
+  background-image: url(../assets/hero-img.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -166,13 +166,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
   gap: 2rem;
+  padding: 1rem;
 
   .Hero-h1 {
     font-family: var(--font-decorativa);
     font-weight: 400;
-    font-size: 9.375rem;
+    font-size: 8.375rem;
     min-height: 30vh;
     width: 100%;
     display: flex;
@@ -223,6 +223,7 @@ body {
       gap: 3rem;
       justify-content: center;
       align-items: center;
+     
 
 
 
@@ -230,6 +231,7 @@ body {
         --size: 3rem;
         width: var(--size);
         height: var(--size);
+        padding: .9375rem;
 
         position: absolute;
 
@@ -273,6 +275,7 @@ body {
     width: 100%;
     margin: 1.875rem 0 0 0;
     position: relative;
+    padding: 1.25rem;
 
 
     .Lugar-mapa {
@@ -465,7 +468,7 @@ body {
       box-shadow: 0 4px 8px var(--sombra);
       padding: 2rem;
       width: 90%;
-      max-height: 90%;
+      max-height: 100%;
       position: absolute;
       display: flex;
       flex-flow: column nowrap;
@@ -568,13 +571,13 @@ body {
             max-height: 11.25rem;
             object-fit: cover;
             border-radius: 1.25rem;
+            transition: scale .5s ease;
           }
 
-          .Bebidas-img {
-            max-height: 11.25rem;
-            object-fit: cover;
-            border-radius: 1.25rem;
+          .Postres-img:hover{
+            scale: 0.9;
           }
+
         }
 
       }
@@ -618,7 +621,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
 
 
   .Hero {
@@ -677,6 +680,7 @@ body {
 
   @media (max-width: 500px) {
     .Hero {
+      padding: 0;
       .Hero-h1 {
         font-size: 4rem;
         min-height: 30vh;
@@ -685,6 +689,7 @@ body {
     }
 
     .Destinos {
+      padding: 1.25rem;
       .Regiones {
         .Destinos-mapa {
           max-height: 400px;

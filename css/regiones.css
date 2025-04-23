@@ -382,7 +382,7 @@ body {
           background-color: var(--color-primario);
           margin: auto;
           width: 100%;
-          height: 100%;
+          height: 100vh;
           position: absolute;
           top: 0;
           left: 0;
@@ -401,6 +401,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px;
 
 
           }
@@ -468,7 +469,7 @@ body {
 
               object-fit: cover;
               width: 100%;
-              height: 20rem;
+              height: 30rem;
 
 
             }
@@ -623,6 +624,13 @@ body {
   .Regiones-container {
      .Regiones-tabs-content {
          .active {
+          .Regiones-content-departamentos {
+            position: relative;
+
+            .Departamento-grande {
+              height: 100%;
+            }
+          }
              .Carrousel {
                  .Carrousel-grande {
                      .Carrousel-imagen-info {
@@ -648,6 +656,9 @@ body {
 
       .Regiones-tabs-content {
         .active {
+         
+
+          
             .Carrousel {
                 .Carrousel-grande {
                     .Carrousel-imagen-info {
@@ -685,6 +696,7 @@ body {
 
   .Regiones-container{
     width: 100%;
+    padding: 1.125rem;
 
     .Regiones-tabs {
       .Regiones-tabs-button {
@@ -705,4 +717,19 @@ body {
     }
 }
   
+}
+
+@media (max-width: 400px){
+  .Regiones-container {
+     .Regiones-tabs-content {
+         .active {
+             .Regiones-content-departamentos {
+             
+                .Departamento-grande {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
 }
