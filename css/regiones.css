@@ -154,7 +154,7 @@ body {
   --color-amarillo-colombia: rgb(252, 209, 22);
   --color-rojo-colombia: rgb(206, 17, 38);
 
-  --sombra-neumorfismo: 20px 20px 60px #bebebe, -20px -20px 60px var(--color-secundario);
+  --sombra-neumorfismo: 1.25rem 1.25rem 3.75rem #bebebe, -1.25rem -1.25rem 3.75rem var(--color-secundario);
 }
 
 .Hero {
@@ -227,8 +227,8 @@ body {
         .Regiones-nav-li:hover {
           border-radius: 1.25rem;
           background: var(--color-secundario);
-          box-shadow: 11px 11px 19px var(--color-acento),
-            -11px -11px 19px var(--color-secundario);
+          box-shadow: .6875rem .6875rem 1.1875rem var(--color-acento),
+            -0.6875rem -0.6875rem 1.1875rem var(--color-secundario);
             scale: 1.1;
         }
 
@@ -357,11 +357,11 @@ body {
 
 
           .departamentos-list-li {
-            perspective: 1400px;
+            perspective: 87.5rem;
 
             .departamentos-list-img {
-              width: 150px;
-              height: 150px;
+              width: 9.375rem;
+              height: 9.375rem;
               cursor: pointer;
               
            
@@ -389,7 +389,7 @@ body {
           right: 0;
           display: flex;
           flex-direction: column;
-          border-radius: 20px;
+          border-radius: 1.25rem;
           background: var(--color-primario);
           box-shadow: var(--sombra-neumorfismo);
           padding: 3.125rem;
@@ -401,7 +401,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 15px;
+            padding: .9375rem;
 
 
           }
@@ -439,7 +439,7 @@ body {
       .Carrousel {
         width: 90%;
         max-width: 120em;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         background: var(--color-primario);
         box-shadow: var(--sombra-neumorfismo);
 
@@ -454,14 +454,14 @@ body {
 
           padding: 1em;
 
-          transition: all .5s ease;
+          transition: transform .5s ease;
           transform: translateX(0%);
 
 
 
           .Carrousel-imagen-info {
             width: calc(100% / 5 - 1em);
-            border-radius: 20px;
+            border-radius: 1.25rem;
             background: var(--color-primario);
             box-shadow: var(--sombra-neumorfismo);
 
@@ -512,49 +512,45 @@ body {
 
 
         .card {
-          width: 190px;
-          height: 254px;
-          
-          transition: all 0.4s;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-          font-size: 30px;
+          width: 11.875rem;
+          height: 15.875rem;
+          transition: transform 0.4s ease;
+          border-radius: .625rem;
+          box-shadow: 0rem 0rem .625rem .3125rem rgba(0, 0, 0, 0.705);
+          font-size: 1.875rem;
           font-weight: 900;
           overflow: hidden;
           margin: 1.875rem 0 0 0;
 
           &:hover {
-            border-radius: 15px;
+            border-radius: .9375rem;
             cursor: pointer;
             transform: scale(1.2);
-            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+            box-shadow: 0rem 0rem .625rem .3125rem rgba(0, 0, 0, 0.705);
             background: rgb(103, 151, 255);
           }
 
           .first-content {
             height: 100%;
             width: 100%;
-            transition: all 0.4s;
+            transition: opacity 0.4s ease ;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-between;
             align-items: center;
             opacity: 1;
-            border-radius: 15px;
+            border-radius: .9375rem;
             padding: .625rem;
-
-
-
 
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
 
-            .imagen-carnaval {}
+           
 
 
             .card:hover & {
-              height: 0px;
+              height: 0rem;
               opacity: 0;
             }
           }
@@ -568,9 +564,9 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 15px;
+            border-radius: .9375rem;
             transition: transform 0.4s ease;
-            font-size: 0px;
+            font-size: 0rem;
             transform: rotate(90deg) scale(-1);
 
             .card:hover & {

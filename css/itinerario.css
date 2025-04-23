@@ -167,12 +167,12 @@ body {
 
 
     .Cuestionario-preguntas {
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(.9375rem);
         background: var(--color-blanco-opaco);
-        border-radius: 30px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 1.875rem;
+        box-shadow: 0 .75rem 1.875rem rgba(0, 0, 0, 0.1);
         padding: 2rem;
-        transition: all 0.3s ease;
+        
         position: relative;
 
         .Cuestionario-form {
@@ -195,7 +195,7 @@ body {
                         background-color: var(--color-blanco-opaco);
 
                         width: 100%;
-                        border-radius: 12px;
+                        border-radius: .75rem;
                         padding: 0.8rem 1rem;
                         font-size: 1rem;
 
@@ -211,7 +211,8 @@ body {
                         width: 100%;
                         gap: 2rem;
                         display: flex;
-                        flex-flow: row wrap;                        justify-content: center;
+                        flex-flow: row wrap;  
+                        justify-content: center;
                         align-items: center;
 
 
@@ -257,13 +258,13 @@ body {
                 .button {
                     margin: 1.5rem;
                     padding: .9375rem 2rem;
-                    border-radius: 15px;
+                    border-radius: .9375rem;
                     border: 1px solid rgba(255, 255, 255, 0.4);
                     
                     font-weight: 600;
                     font-size: 1rem;
                     cursor: pointer;
-                    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 .5rem 1.875rem rgba(0, 0, 0, 0.1);
                     transition: scale .5s ease;
                    
                 }
@@ -286,10 +287,10 @@ body {
     .Resultado{
         width: 80%;
         min-height: 80vh;
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(.9375rem);
         background: var(--color-blanco-opaco);
-        border-radius: 30px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 1.875rem;
+        box-shadow: 0 .75rem 1.875rem rgba(0, 0, 0, 0.1);
         padding: 2rem;
         margin: auto;
         position: absolute;
@@ -345,7 +346,7 @@ body {
             }
 
             .Resultado-dia:hover{
-                backdrop-filter: blur(15px);
+                backdrop-filter: blur(.9375rem);
                 background: var(--color-fondo-destacado);
                 scale: 1.05;
             }
@@ -379,7 +380,7 @@ body {
     .Cuestionario {
         .Resultado {
             width: 100%;
-            max-height: 737px;
+            max-height: 46.0625rem;
 
             .Resultado-dias {
                 grid-template-columns: 1fr;

@@ -238,9 +238,9 @@
     .Footer-mapa::after, .Footer-mapa::before{
       content: "";
       width: 50%;
-      height: 2px;
+      height: .125rem;
       background-color: var(--color-gris-claro);
-      margin: 0 20px;
+      margin: 0 1.25rem;
    
     }
    

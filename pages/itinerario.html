@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
 <body>
     <header class="Header">
         <div class="Header-logo">
-            <img src="../assets/mapa.svg" alt="Mapa colombia" width="20" height="20">
+            <img src="../assets/mapa.svg" alt="Mapa colombia" width="20" height="20" loading="lazy">
         </div>
 
         <button class="Header-abrir">
@@ -33,9 +33,9 @@
                 </svg>
             </button>
             <ul class="Header-ul">
-                <li class="Header-li"><a href="../index.html">Inicio</a></li>
-                <li class="Header-li"><a href="../pages/regiones.html">Regiones</a></li>
-                <li class="Header-li"><a href="../pages/itinerario.html">Itinerario</a></li>
+                <li class="Header-li"><a href="../index.html" title="Inicio">Inicio</a></li>
+                <li class="Header-li"><a href="../pages/regiones.html" title="Regiones">Regiones</a></li>
+                <li class="Header-li"><a href="../pages/itinerario.html" title="Itinerario">Itinerario</a></li>
 
             </ul>
         </nav>
@@ -50,7 +50,7 @@
 
                 <h2>🌍 Encuentra tu itinerario ideal</h2>
 
-                <form action="" class="Cuestionario-form">
+                <form action="#" class="Cuestionario-form">
                     <ul class="Cuestionario-ul">
                   
                      
@@ -75,38 +75,49 @@
                         </label>
                   
                         <div class="tipo-experiencia">
-                          <label class="opcion">
-                            <input type="radio" name="tipo" value="playa" checked>
-                            <div class="icono-nombre seleccionado">
-                              <img src="../assets/playa.svg" alt="" class="tipo-experiencia-icono">
-                              <div class="nombre-img">Playa</div>
+
+                          <div class="opcion">
+                            <input type="radio" name="tipo" value="playa" id="playa" checked>
+                            <div >
+                              <div class="icono-nombre seleccionado">
+                                <img src="../assets/playa.svg" alt="Playa" class="tipo-experiencia-icono" loading="lazy">
+                                <label class="nombre-img">Playa</label>
+                              </div>
                             </div>
-                          </label>
-                  
-                          <label class="opcion">
-                            <input type="radio" name="tipo" value="naturaleza">
-                            <div class="icono-nombre">
-                                <img src="../assets/mountain.svg" alt="" class="tipo-experiencia-icono">
-                                <div class="nombre-img">Montaña</div>
+                          </div>
+                        
+                          <div class="opcion">
+                            <input type="radio" name="tipo" value="naturaleza" id="naturaleza">
+                            <div >
+                              <div class="icono-nombre">
+                                <img src="../assets/mountain.svg" alt="Naturaleza" class="tipo-experiencia-icono" loading="lazy">
+                                <label for="naturaleza" class="nombre-img">Montaña</label>
                               </div>
-                          </label>
-                  
-                          <label class="opcion">
-                            <input type="radio" name="tipo" value="ciudad">
-                            <div class="icono-nombre">
-                                <img src="../assets/city.svg" alt="" class="tipo-experiencia-icono">
-                                <div class="nombre-img">Ciudad</div>
+                            </div>
+                          </div>
+                        
+                          <div class="opcion">
+                            <input type="radio" name="tipo" value="ciudad" id="ciudad">
+                            <div >
+                              <div class="icono-nombre">
+                                <img src="../assets/city.svg" alt="Ciudad" class="tipo-experiencia-icono" loading="lazy">
+                                <label for="ciudad" class="nombre-img">Ciudad</label>
                               </div>
-                          </label>
-                  
-                          <label class="opcion">
-                            <input type="radio" name="tipo" value="combinado">
-                            <div class="icono-nombre">
-                                <img src="../assets/combinado.svg" alt="" class="tipo-experiencia-icono">
-                                <div class="nombre-img">Un poco de todo</div>
+                            </div>
+                          </div>
+                        
+                          <div class="opcion">
+                            <input type="radio" name="tipo" value="combinado" id="combinado">
+                            <div >
+                              <div class="icono-nombre">
+                                <img src="../assets/combinado.svg" alt="Combinado" class="tipo-experiencia-icono" loading="lazy">
+                                <label for="combinado" class="nombre-img">Un poco de todo</label>
                               </div>
-                          </label>
+                            </div>
+                          </div>
+                        
                         </div>
+                        
                       </li>
                   
                     </ul>
@@ -2949,43 +2960,53 @@
     </main>
 
     <footer class="Footer">
-        <div class="Footer-mapa">
-            <img src="../assets/colombia-footer.svg" alt="Mapa Colombia" class="Footer-img">
-
+      <div class="Footer-mapa">
+        <img src="../assets/colombia-footer.svg" alt="Mapa Colombia" class="Footer-img" loading="lazy">
+  
+      </div>
+  
+      <div class="Footer-social-enlaces">
+        <div class="Footer-social">
+          <ul class="Footer-social-ul">
+            <li class="Footer-social-li" >
+              <a href="https://www.facebook.com/" title="Facebook" target="_blank" rel="noreferrer">
+                 <img src="../assets/facebook.svg" alt="facebook" class="Footer-social-media" loading="lazy">
+               </a>
+            </li>
+            <li class="Footer-social-li">
+              <a href="https://www.tiktok.com/" title="TikTok" target="_blank" rel="noreferrer">
+                <img src="../assets/tiktok.svg" alt="TikTok" class="Footer-social-media Footer-social-media-tiktok" loading="lazy">
+              </a>
+              
+            </li>
+            <li class="Footer-social-li">
+              <a href="https://www.youtube.com/" title="youtube" target="_blank" rel="noreferrer">
+                <img src="../assets/youtube.svg" alt="youtube" class="Footer-social-media" loading="lazy">
+              </a>
+              
+            </li>
+            <li class="Footer-social-li">
+              <a href="https://www.instagram.com/" title="instagram" target="_blank" rel="noreferrer">
+                <img src="../assets/insta.svg" alt="Instagram" class="Footer-social-media" loading="lazy">
+              </a>
+              
+            </li>
+  
+          </ul>
         </div>
-
-        <div class="Footer-social-enlaces">
-            <div class="Footer-social">
-                <ul class="Footer-social-ul">
-                    <li class="Footer-social-li">
-                        <img src="../assets/facebook.svg" alt="facebook" class="Footer-social-media">
-                    </li>
-                    <li class="Footer-social-li">
-                        <img src="../assets/tiktok.svg" alt="x social"
-                            class="Footer-social-media Footer-social-media-tiktok">
-                    </li>
-                    <li class="Footer-social-li">
-                        <img src="../assets/youtube.svg" alt="" class="Footer-social-media">
-                    </li>
-                    <li class="Footer-social-li">
-                        <img src="../assets/insta.svg" alt="hh" class="Footer-social-media">
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="Footer-enlaces">
-                <h3 class="Footer-enlaces-h3">Enlaces de interés</h3>
-                <ul class="Footer-enlaces-ul">
-                    <li class="Footer-enlaces-li"><a href="../index.html">Inicio</a></li>
-                    <li class="Footer-enlaces-li"><a href="../pages/regiones.html">Regiones</a></li>
-                    <li class="Footer-enlaces-li"><a href="../pages/itinerario.html">Itinerario</a></li>
-
-                </ul>
-
-            </div>
+  
+        <div class="Footer-enlaces">
+          <h3 class="Footer-enlaces-h3">Enlaces de interés</h3>
+          <ul class="Footer-enlaces-ul">
+            <li class="Footer-enlaces-li"><a href="../index.html" title="Inicio">Inicio</a></li>
+            <li class="Footer-enlaces-li"><a href="../pages/regiones.html" title="Regiones">Regiones</a></li>
+            <li class="Footer-enlaces-li"><a href="../pages/itinerario.html" title="Itinerario">Itinerario</a></li>
+            
+          </ul>
+  
         </div>
-
+      </div>
+  
     </footer>
 
 </body>

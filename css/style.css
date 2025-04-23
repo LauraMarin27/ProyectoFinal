@@ -180,7 +180,7 @@ body {
     justify-content: center;
     color: var(--color-fondo);
 
-    -webkit-text-stroke: 3px rgb(9, 16, 39);
+    -webkit-text-stroke: .1875rem rgb(9, 16, 39);
     margin-bottom: 1.25rem;
 
     animation: upDown 5s ease 0s infinite both;
@@ -190,7 +190,7 @@ body {
 
   .Hero-carrousel {
 
-    max-width: 600px;
+    max-width: 37.5rem;
     background-color: var(--color-fondo);
     margin: auto;
     border-radius: 1rem;
@@ -200,12 +200,12 @@ body {
     scroll-snap-type: x mandatory;
 
     .Hero-imagenes {
-      min-height: 200px;
+      min-height: 12.5rem;
       display: grid;
 
 
       .Hero-img {
-        height: 300px;
+        height: 18.75rem;
 
         scroll-snap-align: center;
       
@@ -240,7 +240,7 @@ body {
 
         border-radius: 1rem;
         top: 50%;
-        margin: auto 20px;
+        margin: auto 1.25rem;
 
 
         cursor: pointer;
@@ -295,7 +295,7 @@ body {
       }
 
       .modal-titulo {
-        font-size: 20px;
+        font-size: 1.25rem;
 
 
       }
@@ -310,11 +310,11 @@ body {
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      border-radius: 50px;
+      border-radius: 3.125rem;
       transition: scale .6s ease;
       background: #e0e0e0;
-      box-shadow: -26px -26px 51px #989898,
-        26px 26px 51px #ffffff;
+      box-shadow: -1.625rem -1.625rem 3.1875rem #989898,
+        1.625rem 1.625rem 3.1875rem #ffffff;
 
 
 
@@ -342,8 +342,8 @@ body {
         padding: 1.25rem;
         color: var(--color-texto);
         border: var(--color-texto) 1px solid;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 3.125rem;
+        border-bottom-right-radius: 3.125rem;
 
         .Capital {
           display: flex;
@@ -398,8 +398,8 @@ body {
 .Info {
 
   background: var(--color-primario);
-  box-shadow: 20px 20px 60px #bebebe,
-    -20px -20px 60px var(--color-fondo);
+  box-shadow: 1.25rem 1.25rem 3.75rem #bebebe,
+    -1.25rem -1.25rem 3.75rem var(--color-fondo);
   margin: 1.25rem 0 0 0;
   border-radius: 1.25rem;
 
@@ -426,7 +426,7 @@ body {
 
     .Info-especifica {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(3.125rem);
       min-height: 30vh;
       width: 100%;
       display: flex;
@@ -465,7 +465,7 @@ body {
       opacity: 0;
       background-color: var(--color-fondo);
       border-radius: .625rem;
-      box-shadow: 0 4px 8px var(--sombra);
+      box-shadow: 0 .25rem .5rem var(--sombra);
       padding: 2rem;
       width: 90%;
       max-height: 100%;
@@ -491,7 +491,7 @@ body {
         justify-content: space-between;
         align-items: center;
         background-color: var(--color-fondo);
-        border-radius: 50px;
+        border-radius: 3.125rem;
 
 
 
@@ -601,6 +601,11 @@ body {
 
 
 @media (max-width: 1100px) {
+  .Hero {
+    .Hero-h1 {
+      font-size: 5.375rem;
+    }
+  }
   .Destinos {
     .Regiones {
       .Departamento {
@@ -626,6 +631,9 @@ body {
 
   .Hero {
     flex-direction: column;
+    .Hero-h1 {
+      font-size: 8.375rem;
+    }
 
   }
 
@@ -666,7 +674,7 @@ body {
     }
   }
 
-  h1 {
+  
 
     .Info {
       .Info-util {
@@ -676,7 +684,9 @@ body {
     }
 
 
-  }
+  
+
+}
 
   @media (max-width: 500px) {
     .Hero {
@@ -692,7 +702,7 @@ body {
       padding: 1.25rem;
       .Regiones {
         .Destinos-mapa {
-          max-height: 400px;
+          max-height: 25rem;
         }
 
         .Departamento {
@@ -714,7 +724,7 @@ body {
 
     }
   }
-}
+
 
 @media (max-width: 320px) {
   .Hero {
