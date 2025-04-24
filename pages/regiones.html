@@ -1,6 +1,15 @@
+<!-- 
+Descripción: Este archivo HTML corresponde a la página "Regiones", donde se presenta información detallada sobre cada una de las regiones de Colombia.
+
+Estructura general:
+- Encabezado (header)
+- Sección principal (hero) con una frase representativa sobre Colombia e imagen destacada
+- Artículo con un mapa SVG interactivo por región; cada SVG contiene un enlace (<a>) que dirige a la sección correspondiente dentro de la página
+- Secciones individuales por región, con contenido específico y detallado
+- Pie de página (footer)
+-->
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +21,7 @@
 </head>
 
 <body>
+   <!-- Encabezado con menú de navegación hacia las distintas páginas de mi sitio web -->
   <header class="Header">
     <div class="Header-logo">
       <img src="../assets/mapa.svg" alt="Mapa colombia" width="20" height="20" loading="lazy">
@@ -40,6 +50,7 @@
   </header>
 
   <main>
+    <!-- Hero con frase acerca de colombia y de fondo imagen representativa -->
     <div class="Hero">
       <blockquote class="Hero-quote">
         El cielo le canta a tus mares mi bella Colombia.
@@ -53,6 +64,11 @@
       <cite class="Hero-cite">— Juan Luis Guerra</cite>
     </div>
 
+    <!-- 
+Article con seis SVG que representan cada región de Colombia. 
+Al hacer clic en alguno de ellos, se redirige a la sección correspondiente de la página para conocer más sobre esa región. 
+-->
+
     <article class="Regiones">
       <h1 class="Regiones-h1">Conoce las regiones de Colombia </h1>
       <p class="Regiones-p">Colombia es un país de contrastes y colores, donde cada región cuenta una historia
@@ -62,6 +78,7 @@
         hace tan especiales. Prepárate para un recorrido lleno de biodiversidad, tradiciones y paisajes que te dejarán
         sin aliento.</p>
 
+        <!-- SVG obtenidos de https://colombia.travel/es -->
       <div class="Regiones-svg">
         <nav class="Regiones-nav">
           <ul class="Regiones-nav-ul">
@@ -444,6 +461,8 @@
 
     </article>
 
+    <!-- Seccion con información de la región caribe , donde podremos conocer sobre 
+    sus departamentos mas caracteristicos , su gastronomia y fiestas tradicionales -->
     <section id="caribe" class="Regiones-container Regiones-container--caribe">
 
       <div class="Region-nombre">
@@ -462,8 +481,10 @@
 
 
       </div>
+        
 
       <div class="Regiones-tabs-content">
+         <!-- Información general -->
         <div class="Regiones-content active">
           <h2 class="Regiones-content-h2">🌴 Información general</h2>
 
@@ -534,6 +555,7 @@
 
 
         </div>
+         <!-- Gastronomia-->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Gastronomía</h2>
           <p class="Regiones-content-p"> El sabor del Caribe colombiano es una fiesta para el paladar. En cada plato se
@@ -606,8 +628,7 @@
 
           </div>
         </div>
-
-
+         <!-- Fiestas y tradiciones-->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Fiestas y Tradiciones</h2>
           <p class="Regiones-content-p">Colombia es conocida por sus vibrantes festivales y tradiciones culturales.
@@ -672,6 +693,8 @@
 
     </section>
 
+       <!-- Seccion con información de los andes occidentales , donde podremos conocer sobre 
+    sus departamentos mas caracteristicos , su gastronomia y fiestas tradicionales -->
     <section id="andes-occidentales" class="Regiones-container Regiones-container--andesOccidentales">
 
       <div class="Region-nombre cambio">
@@ -691,7 +714,9 @@
 
       </div>
 
+         
       <div class="Regiones-tabs-content">
+        <!-- Información general -->
         <div class="Regiones-content active">
           <h2 class="Regiones-content-h2">🌄 Información general</h2>
 
@@ -757,6 +782,7 @@
 
 
         </div>
+        <!--Gastronomia -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Gastronomía</h2>
           <p class="Regiones-content-p"> La gastronomía de los Andes Occidentales Colombianos es una deliciosa mezcla de
@@ -832,7 +858,7 @@
           </div>
         </div>
 
-
+        <!-- Fiestas y tradiciones -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Fiestas y Tradiciones</h2>
           <p class="Regiones-content-p">Los Andes Occidentales de Colombia son una región rica en cultura y tradición.
@@ -896,6 +922,8 @@
 
     </section>
 
+       <!-- Seccion con información de la región del pacifico , donde podremos conocer sobre 
+    sus departamentos mas caracteristicos , su gastronomia y fiestas tradicionales -->
     <section id="pacifico" class="Regiones-container Regiones-container--pacifico">
 
       <div class="Region-nombre">
@@ -915,7 +943,9 @@
 
       </div>
 
+         
       <div class="Regiones-tabs-content">
+        <!-- Información general -->
         <div class="Regiones-content active">
           <h2 class="Regiones-content-h2">🌴 Información general</h2>
 
@@ -985,6 +1015,7 @@
 
 
         </div>
+        <!-- Gastronomia -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Gastronomía</h2>
           <p class="Regiones-content-p"> La gastronomía del Pacífico Colombiano es un reflejo de la riqueza natural de
@@ -1062,8 +1093,7 @@
 
           </div>
         </div>
-
-
+        <!-- Fiestas y tradiciones -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Fiestas y Tradiciones</h2>
           <p class="Regiones-content-p">El Pacífico Colombiano es una región vibrante, con una profunda herencia
@@ -1126,6 +1156,8 @@
 
     </section>
 
+       <!-- Seccion con información de los andes orientales, donde podremos conocer sobre 
+    sus departamentos mas caracteristicos , su gastronomia y fiestas tradicionales -->
     <section id="andes-orientales" class="Regiones-container Regiones-container--antesOrientales">
 
       <div class="Region-nombre cambio">
@@ -1145,7 +1177,9 @@
 
       </div>
 
+        
       <div class="Regiones-tabs-content">
+           <!-- Información general -->
         <div class="Regiones-content active">
           <h2 class="Regiones-content-h2">🌴 Información general</h2>
 
@@ -1217,6 +1251,7 @@
 
 
         </div>
+           <!-- Gastronomia -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Gastronomía</h2>
           <p class="Regiones-content-p"> La gastronomía de los Andes Orientales Colombianos es una mezcla de sabores
@@ -1294,8 +1329,7 @@
 
           </div>
         </div>
-
-
+           <!-- Fiestas y tradiciones -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Fiestas y Tradiciones</h2>
           <p class="Regiones-content-p">Los Andes Orientales de Colombia, conformados principalmente por los
@@ -1362,6 +1396,8 @@
 
     </section>
 
+       <!-- Seccion con información de la región del macizo colombiano , donde podremos conocer sobre 
+    sus departamentos mas caracteristicos , su gastronomia y fiestas tradicionales -->
     <section id="macizo" class="Regiones-container Regiones-container--macizo">
 
       <div class="Region-nombre">
@@ -1381,7 +1417,9 @@
 
       </div>
 
+       
       <div class="Regiones-tabs-content">
+          <!-- Información general -->
         <div class="Regiones-content active">
           <h2 class="Regiones-content-h2">🌴 Información general</h2>
 
@@ -1442,6 +1480,7 @@
 
 
         </div>
+          <!-- Gastronomia -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Gastronomía</h2>
           <p class="Regiones-content-p"> La gastronomía del Macizo Colombiano es una mezcla de ingredientes autóctonos y
@@ -1521,6 +1560,7 @@
         </div>
 
 
+          <!-- Fiestas y tradiciones -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Fiestas y Tradiciones</h2>
           <p class="Regiones-content-p">El Macizo Colombiano, conocido como la “estrella hidrográfica de Colombia”, es
@@ -1574,6 +1614,8 @@
 
     </section>
 
+       <!-- Seccion con información de la region amazonia - orinoquia , donde podremos conocer sobre 
+    sus departamentos mas caracteristicos , su gastronomia y fiestas tradicionales -->
     <section id="amazonas" class="Regiones-container Regiones-container--amazonas">
 
       <div class="Region-nombre cambio">
@@ -1583,17 +1625,17 @@
       </div>
 
 
+         <!-- Tabs para ver determinada información -->
 
       <div class="Regiones-tabs">
         <button class="Regiones-tabs-button active">Información general</button>
         <button class="Regiones-tabs-button">Gastronomía</button>
         <button class="Regiones-tabs-button">Fiestas y Tradiciones</button>
-
-
-
       </div>
 
+      
       <div class="Regiones-tabs-content">
+        <!-- Información general -->
         <div class="Regiones-content active">
           <h2 class="Regiones-content-h2">🌴 Información general</h2>
 
@@ -1663,13 +1705,9 @@
               <img src="#" alt="Imagen grande del departamento" class="imagenGrandeDepartamento" loading="lazy">
 
             </div>
-
-
-
           </div>
-
-
         </div>
+        <!-- Gastronomia -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Gastronomía</h2>
           <p class="Regiones-content-p"> La gastronomía de la Amazonía y Orinoquía Colombiana refleja la rica
@@ -1750,8 +1788,7 @@
 
           </div>
         </div>
-
-
+        <!-- Fiestas y tradiciones -->
         <div class="Regiones-content">
           <h2 class="Regiones-content-h2">Fiestas y Tradiciones</h2>
           <p class="Regiones-content-p">La Amazonia y la Orinoquía colombianas son territorios de diversidad étnica,
@@ -1808,7 +1845,6 @@
           </div>
         </div>
 
-
       </div>
 
 
@@ -1819,6 +1855,7 @@
 
   </main>
 
+   <!-- Footer -->
 
   <footer class="Footer">
     <div class="Footer-mapa">

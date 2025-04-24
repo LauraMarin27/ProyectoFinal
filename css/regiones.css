@@ -1,3 +1,12 @@
+/*───────────────────────────────────────────────────────────────────────*\
+  regiones.css
+  - Reset
+  - Custom Properties
+  - Hero
+  - Regiones
+  - Regiones-container 
+  - Responsive
+\*───────────────────────────────────────────────────────────────────────*/
 :root {
   font-size: 100%;
   font-family: system-ui, sans-serif;
@@ -146,16 +155,29 @@ body {
 
 }
 
-:root {
-  --color-primario: #e0e0e0;
-  --color-secundario: #ffffff;
-  --color-acento: #a71313;
-  --color-azul-colombia: rgb(0, 56, 168);
-  --color-amarillo-colombia: rgb(252, 209, 22);
-  --color-rojo-colombia: rgb(206, 17, 38);
 
+:root {
+  /* Color fondo de pantalla y algunas letras  */
+  --color-primario: #e0e0e0;
+  /* Color utilizado para los neumorfismos */
+  --color-secundario: #ffffff;
+  /* Color utilizado cuando se hace hover en los iconos de las regiones*/
+  --color-acento: #a71313;
+  /* Color respresenta bandera de colombia*/
+  --color-azul-colombia: rgb(0, 56, 168);
+  /* Color para puntos del carrousel de gastronomia*/
+  --color-amarillo-colombia: rgb(252, 209, 22);
+/* Color y estilo de sombre neumorfismo*/
   --sombra-neumorfismo: 1.25rem 1.25rem 3.75rem #bebebe, -1.25rem -1.25rem 3.75rem var(--color-secundario);
 }
+
+ /* ------ Hero ------ */
+  /* Descripcion: Estilos para el Hero donde se encuentra la frase y la imagen representativa
+  Estructura:  
+    - Hero-cite
+                           
+                  
+   */
 
 .Hero {
   background-image:
@@ -185,6 +207,14 @@ body {
   }
 }
 
+ /* ------ Regiones ------ */
+  /* Descripcion: Lugar donde se encuentran los seis SVG por cada región de Colombia
+  Estructura:  
+    - Regiones-svg:
+                  - Regiones-nav
+                  - Regiones-nav-ul
+                  - Regiones-nav-li
+   */
 .Regiones {
   min-height: 100vh;
   width: 90%;
@@ -232,8 +262,6 @@ body {
             scale: 1.1;
         }
 
-
-
       }
 
     }
@@ -241,9 +269,24 @@ body {
   }
 }
 
+ /* ------ Regiones-container ------ */
+  /* Descripcion: Lugar donde vamos a encontrar la información la región como
+  sus despartamentos mas caracteristicos , su gastronomia y fiestras tradicionales
+  Estructura:  
+    - Region-nombre:
+                    - Region-nombre-img
+                    - Region-nombre-h2
+    - Regiones-tabs:
+                    - Regiones-tabs-button
+    - Regiones-tabs-content:
+                    - Regiones-content
+    - active:
+            - Regiones-content-departamentos
+            - Carrousel
+            - contenedor-card
+                  
+   */
 .Regiones-container {
-
-  
   width: 90%;
   margin: 1.25rem auto 1.25rem auto;
   display: flex;
@@ -616,6 +659,7 @@ body {
   ;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .Regiones-container {
      .Regiones-tabs-content {
@@ -642,9 +686,6 @@ body {
 }
 
 @media (max-width: 800px) {
-
-   
-
   .Regiones-container {
       .Regiones-tabs {
           gap: 1.075rem;

@@ -1,3 +1,10 @@
+/*───────────────────────────────────────────────────────────────────────*\
+  itinerario.css
+  - Reset
+  - Custom Properties
+  - Cuestionario
+  - Responsive
+\*───────────────────────────────────────────────────────────────────────*/
 :root {
     font-size: 100%;
     font-family: system-ui, sans-serif;
@@ -147,12 +154,32 @@ body {
 }
 
 :root {
+    /* Color fondo de cuestionario y resultado */
     --color-blanco-opaco: rgba(255, 255, 255, 0.7);
+    /* Color el hover de los iconos de que tipo de experiencia quiere*/
     --color-fondo-destacado: rgba(185, 181, 241, 0.7);
+    /* Color para bordes */
     --color-borde: black;
   }
 
+ /* ------ Cuestionario ------ */
+  /* Descripcion: Estilos para el cuestionario de intereses y resultados
+  Estructura:  
+    - Cuestionario-preguntas: 
+                            - Cuestionario-form
+                            - Cuestionario-ul
+                            - Cuestionario-li
+                            - Cuestionario-select
+                            - Cuestionario-label
+                            - tipo-experiencia
+                            - Cuestionario-boton
+    - Resultado :
+                - Resultado-cerrar
+                - Resultado-dias
 
+    - Mostrar (Mostrar los resultados) :
+                  
+   */
 .Cuestionario {
     width: 100%;
     min-height: 100vh;
@@ -366,6 +393,8 @@ body {
     }
 
 }
+
+/* Responsive */
 
 @media (max-width: 700px) {
     .Cuestionario {

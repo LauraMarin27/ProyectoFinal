@@ -1,3 +1,13 @@
+/*───────────────────────────────────────────────────────────────────────*\
+  global.css
+  - Reset
+  - Custom Properties
+  - Variables globales
+  - Header
+  - Footer
+  - Responsive
+\*───────────────────────────────────────────────────────────────────────*/
+
 :root {
     font-size : 100%;
     font-family : system-ui, sans-serif;
@@ -77,9 +87,12 @@
     fill : currentColor;
   }
 
+
   :root {
-    --color-negro: #000000;
-    --color-gris-claro: #ccc;
+    /* Color para textos  y border  */
+    --color-negro: #000000; 
+    /* Color para mapa  */
+    --color-gris-claro: #ccc; 
    
   }
 
@@ -125,6 +138,17 @@
     margin-bottom: 1rem;
   }
 
+  /* ------ Header ------ */
+  /* Descripcion: Estilos para el Header que va a tener todas las paginas de la web 
+  Estructura:  
+    - Header-logo
+    - Header-abrir
+    - Header-nav :
+                   - Header-ul
+                   - Header-cerrar
+   */
+
+
   .Header {
 
     min-height: 15vh;
@@ -168,6 +192,19 @@
     background: linear-gradient(to right, yellow 33%, blue 33% 66%, red 66% 100%);
   }
 
+
+  /* ------ Footer ------ */
+  /* Descripcion: Estilos para el Footer que va a tener todas las paginas de la web 
+  Estructura:  
+    - Footer-mapa:
+                   - Footer-img
+    - Footer-social-enlaces :
+                    - Footer-social
+                    - Footer-social-ul
+                    - Footer-social-li
+                    - Footer-social-media
+    - Footer-enlaces
+   */
   .Footer {
     /*Degradado hecho con ChatGpt*/
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)),
@@ -247,6 +284,7 @@
    
   }
 
+  /* Responsive */
   @media (max-width: 900px) {
     .Header {
       width: 100%;
@@ -341,20 +379,12 @@
             .Footer-social-li{
               .Footer-social-media{
                 width: 2.5rem;
-                height: 2.5rem;
-                
-                
+                height: 2.5rem; 
               }
-      
-             
             }
           }
         }
-      }
-    
-      
-    
-      
+      } 
     }
   }
 
@@ -363,9 +393,7 @@
       .Header-nav {
         max-width: 40%;
       }
-    }
-
-    
+    } 
   }
 
   @media (max-width: 400px) {
@@ -374,6 +402,4 @@
         max-width: 50%;
       }
     }
-
-    
   }
