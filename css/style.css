@@ -12,7 +12,9 @@
   font-size: 100%;
   font-family: system-ui, sans-serif;
   scroll-behavior: smooth;
+  
 }
+
 
 *,
 *::before,
@@ -137,6 +139,7 @@ svg {
 }
 
 body {
+  
   min-height: 100vh;
   line-height: 1.5em;
   color: inherit;
@@ -191,6 +194,8 @@ Estructura:
   align-items: center;
   gap: 2rem;
   padding: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .Hero-h1 {
   font-family: var(--font-decorativa);
@@ -207,7 +212,7 @@ Estructura:
   animation: upDown 5s ease 0s infinite both;
 }
 .Hero-carrousel {
-  max-width: 37.5rem;
+  max-width: 31.25rem;
   background-color: var(--color-fondo);
   margin: auto;
   border-radius: 1rem;
@@ -268,6 +273,7 @@ Estructura:
 .Destinos {
   min-height: 100vh;
   padding: 3.125rem;
+  width: 100%;
 }
 .Regiones {
   display: flex;
@@ -409,7 +415,7 @@ Estructura:
   transition: scale 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 .Info-img {
-  width: 6.25rem;
+  width: 5rem;
   height: 6.25rem;
   object-fit: cover;
 }
