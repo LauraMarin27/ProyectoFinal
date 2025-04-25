@@ -1,0 +1,431 @@
+/*───────────────────────────────────────────────────────────────────────*\
+  itinerario.css
+  - Reset
+  - Custom Properties
+  - Cuestionario
+  - Responsive
+\*───────────────────────────────────────────────────────────────────────*/
+:root {
+    font-size: 100%;
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+*::before,
+*::after {
+    display: block;
+}
+
+img,
+picture,
+video,
+iframe,
+figure,
+canvas {
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    height: initial;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+}
+
+p a {
+    display: inline;
+}
+
+li,
+menu,
+summary {
+    list-style-type: none;
+}
+
+ol {
+    counter-reset: revert;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em,
+pre,
+code,
+mark,
+del {
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+}
+
+mark {
+    background-color: transparent;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: none;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    appearance: none;
+}
+
+fieldset {
+    border: none;
+}
+
+::placeholder {
+    color: unset;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+table,
+tr,
+td,
+th,
+tbody,
+thead,
+tfoot {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: inherit;
+}
+
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5em;
+    color: inherit;
+    hyphens: auto;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Properties */
+:root {
+    /* Color fondo de cuestionario y resultado */
+    --color-blanco-opaco: rgba(255, 255, 255, 0.7);
+    /* Color el hover de los iconos de que tipo de experiencia quiere*/
+    --color-fondo-destacado: rgba(185, 181, 241, 0.7);
+    /* Color para bordes */
+    --color-borde: black;
+  }
+
+ /* ------ Cuestionario ------ */
+  /* Descripcion: Estilos para el cuestionario de intereses y resultados
+  Estructura:  
+    - Cuestionario-preguntas: 
+                            - Cuestionario-form
+                            - Cuestionario-ul
+                            - Cuestionario-li
+                            - Cuestionario-select
+                            - Cuestionario-label
+                            - tipo-experiencia
+                            - Cuestionario-boton
+    - Resultado :
+                - Resultado-cerrar
+                - Resultado-dias
+    - Mostrar (Mostrar los resultados) :        
+   */
+.Cuestionario {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/hero-img.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
+
+    .Cuestionario-preguntas {
+        backdrop-filter: blur(.9375rem);
+        background: var(--color-blanco-opaco);
+        border-radius: 1.875rem;
+        box-shadow: 0 .75rem 1.875rem rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        
+        position: relative;
+
+        .Cuestionario-form {
+            gap: 1.5rem;
+
+
+            .Cuestionario-ul {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+
+                .Cuestionario-li {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Cuestionario-select {
+                        background-color: var(--color-blanco-opaco);
+
+                        width: 100%;
+                        border-radius: .75rem;
+                        padding: 0.8rem 1rem;
+                        font-size: 1rem;
+
+                    }
+
+                    .Cuestionario-label {
+                        font-weight: 600;
+                        margin: 1rem 0 1rem 0;
+                        font-size: 1.1rem;
+                    }
+
+                    .tipo-experiencia {
+                        width: 100%;
+                        gap: 2rem;
+                        display: flex;
+                        flex-flow: row wrap;  
+                        justify-content: center;
+                        align-items: center;
+
+
+                        .opcion {
+                            cursor: pointer;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .icono-nombre {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            transition: scale .6s ease;
+
+
+                            .tipo-experiencia-icono {
+                                width: 6.25rem;
+                            }
+
+
+                        }
+
+                        .icono-nombre:hover{
+                            scale: 1.1;
+                        }
+
+                        .seleccionado{
+                            scale: 1.3;
+                            background-color: rgb(253, 253, 166);
+                        }
+                    }
+
+                }
+
+            }
+
+            .Cuestionario-boton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .button {
+                    margin: 1.5rem;
+                    padding: .9375rem 2rem;
+                    border-radius: .9375rem;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    
+                    font-weight: 600;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    box-shadow: 0 .5rem 1.875rem rgba(0, 0, 0, 0.1);
+                    transition: scale .5s ease;
+                   
+                }
+
+                .button:hover {
+                    background: rgb(255, 255, 255);
+                    scale: 1.1;
+                   
+                  }
+
+
+
+            }
+
+
+
+        }
+    }
+
+    .Resultado{
+        width: 80%;
+        min-height: 80vh;
+        backdrop-filter: blur(.9375rem);
+        background: var(--color-blanco-opaco);
+        border-radius: 1.875rem;
+        box-shadow: 0 .75rem 1.875rem rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin: auto;
+        position: absolute;
+        display: flex;
+        flex-flow: column nowrap;
+        display: none;
+    
+        align-items: center;
+        max-height: 100%;
+        overflow-y: auto;
+
+        .Resultado-cerrar{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            
+            
+
+            .cerrar{
+                padding: .9375rem;
+            border-radius: .625rem;
+            border: 1px solid var(--color-borde);
+
+            }
+            .cerrar:hover{
+                padding: .625rem;
+            border-radius: .625rem;
+                background-color: red;
+                color: white;
+               
+               
+
+            }
+        }
+
+       
+        
+
+        .Resultado-dias{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1rem;
+            margin: 1.25rem;
+
+
+            .Resultado-dia{
+                border: 1px var(--color-borde) solid;
+                padding: .625rem;
+                border-radius: 1.25rem;
+                transition: scale .5s ease;
+              
+               
+            }
+
+            .Resultado-dia:hover{
+                backdrop-filter: blur(.9375rem);
+                background: var(--color-fondo-destacado);
+                scale: 1.05;
+            }
+
+
+
+        }
+
+
+        
+    }
+
+    .Mostrar{
+        display: flex;
+        animation: fadeIn 0.4s ease;
+
+    }
+
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .Cuestionario {
+        .Resultado {
+            width: 90%;
+        }
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .Cuestionario {
+        .Resultado {
+            width: 100%;
+            max-height: 46.0625rem;
+
+            .Resultado-dias {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+

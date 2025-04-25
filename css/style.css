@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*───────────────────────────────────────────────────────────────────────*\
   style.css
   - Reset
@@ -7,7 +8,6 @@
   - Info
   - Responsive
 \*───────────────────────────────────────────────────────────────────────*/
-
 :root {
   font-size: 100%;
   font-family: system-ui, sans-serif;
@@ -53,7 +53,6 @@ a {
 p a {
   display: inline;
 }
-
 
 h1,
 h2,
@@ -142,9 +141,7 @@ body {
   line-height: 1.5em;
   color: inherit;
   hyphens: auto;
-  font-smooth: always;
   -webkit-font-smoothing: antialiased;
-
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -154,312 +151,233 @@ body {
 
 /* Custom Properties */
 :root {
-  
   /* Color para la parte de Info util y para mapa */
-  --color-primario: rgb(252, 209, 22); 
+  --color-primario: rgb(252, 209, 22);
   /* Color representativo de la bandera de Colombia para mapa*/
   --color-secundario: rgb(0, 56, 168);
   /* Color para mapa y boton de cerrar*/
-  --color-terciario: rgb(206, 17, 38);  
+  --color-terciario: rgb(206, 17, 38);
   /* Color de fondo*/
   --color-fondo: #f9f9f9;
   /* Color para textos y borde*/
-  --color-texto: #000; 
+  --color-texto: #000;
   /* Fuente para la palabra Colombia del inicio */
   --font-decorativa: "Kaushan Script", cursive;
   /* Estilo de sombra neumorfismo*/
   --sombra: 0 0 2rem rgba(0, 0, 0, 0.2);
 }
 
-
-
- /* ------ Hero ------ */
-  /* Descripcion: Estilos para el Hero , donde esta el texto decorativo y el carrousel
-  Estructura:  
-    - Hero-h1 
-    - Hero-carrousel:
-                      - Hero-imagenes
-                      - Hero-img 
-                      - Hero-arrows
-                      - Hero-arrow 
-                      - Hero-arrow--prev
-                      - Hero-arrow--next
-   */
+/* ------ Hero ------ */
+/* Descripcion: Estilos para el Hero , donde esta el texto decorativo y el carrousel
+Estructura:  
+  - Hero-h1 
+  - Hero-carrousel:
+                    - Hero-imagenes
+                    - Hero-img 
+                    - Hero-arrows
+                    - Hero-arrow 
+                    - Hero-arrow--prev
+                    - Hero-arrow--next
+ */
 .Hero {
   background-image: url(../assets/hero-img.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  min-height: calc(100vh - 15vh);
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 1rem;
-
-  .Hero-h1 {
-    font-family: var(--font-decorativa);
-    font-weight: 400;
-    font-size: 8.375rem;
-    min-height: 30vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-fondo);
-
-    -webkit-text-stroke: .1875rem rgb(9, 16, 39);
-    margin-bottom: 1.25rem;
-
-    animation: upDown 5s ease 0s infinite both;
-  }
-
-
-
-  .Hero-carrousel {
-
-    max-width: 37.5rem;
-    background-color: var(--color-fondo);
-    margin: auto;
-    border-radius: 1rem;
-    box-shadow: 0 0 2rem var(--sombra);
-    position: relative;
-    overflow: hidden;
-    scroll-snap-type: x mandatory;
-
-    .Hero-imagenes {
-      min-height: 12.5rem;
-      display: grid;
-
-
-      .Hero-img {
-        height: 18.75rem;
-
-        scroll-snap-align: center;
-      
-
-      }
-
-    
-
-
-
-    }
-
-    .Hero-arrows {
-      display: flex;
-      gap: 3rem;
-      justify-content: center;
-      align-items: center;
-     
-
-
-
-      .Hero-arrow {
-        --size: 3rem;
-        width: var(--size);
-        height: var(--size);
-        padding: .9375rem;
-
-        position: absolute;
-
-        background-color: var(--color-fondo);
-        width: fit-content;
-
-        border-radius: 1rem;
-        top: 50%;
-        margin: auto 1.25rem;
-
-
-        cursor: pointer;
-      }
-
-      .Hero-arrow--prev {
-        left: 0;
-        
-        
-      }
-
-     
-
-      .Hero-arrow--next {
-        right: 0;
-      }
-    }
-  }
+}
+.Hero .Hero-h1 {
+  font-family: var(--font-decorativa);
+  font-weight: 400;
+  font-size: 8.375rem;
+  min-height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-fondo);
+  -webkit-text-stroke: 0.1875rem rgb(9, 16, 39);
+  margin-bottom: 1.25rem;
+  animation: upDown 5s ease 0s infinite both;
+}
+.Hero .Hero-carrousel {
+  max-width: 37.5rem;
+  background-color: var(--color-fondo);
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem var(--sombra);
+  position: relative;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+}
+.Hero .Hero-carrousel .Hero-imagenes {
+  min-height: 12.5rem;
+  display: grid;
+}
+.Hero .Hero-carrousel .Hero-imagenes .Hero-img {
+  height: 18.75rem;
+  scroll-snap-align: center;
+}
+.Hero .Hero-carrousel .Hero-arrows {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.Hero .Hero-carrousel .Hero-arrows .Hero-arrow {
+  --size: 3rem;
+  width: var(--size);
+  height: var(--size);
+  padding: 0.9375rem;
+  position: absolute;
+  background-color: var(--color-fondo);
+  width: fit-content;
+  border-radius: 1rem;
+  top: 50%;
+  margin: auto 1.25rem;
+  cursor: pointer;
+}
+.Hero .Hero-carrousel .Hero-arrows .Hero-arrow--prev {
+  left: 0;
+}
+.Hero .Hero-carrousel .Hero-arrows .Hero-arrow--next {
+  right: 0;
 }
 
- /* ------ Destinos ------ */
-  /* Descripcion: Estilos para el mapa y la info que describe el departamento seleccionado
-  Estructura:  
-    - Regiones:
-              - Lugar-mapa
-              - mapa
-              - modal-titulo
-              - Departamento
-              - Departamento-img
-              - Departamento-descripcion
-              - Capital
-              - Destinos-mapa
-              - mapsvg-svg
-    - Regiones-info: 
-                    - 
-   */
+/* ------ Destinos ------ */
+/* Descripcion: Estilos para el mapa y la info que describe el departamento seleccionado
+Estructura:  
+  - Regiones:
+            - Lugar-mapa
+            - mapa
+            - modal-titulo
+            - Departamento
+            - Departamento-img
+            - Departamento-descripcion
+            - Capital
+            - Destinos-mapa
+            - mapsvg-svg
+  - Regiones-info: 
+                  - 
+ */
 .Destinos {
   min-height: 100vh;
-
   padding: 3.125rem;
-
-
-  .Regiones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: 100%;
-    margin: 1.875rem 0 0 0;
-    position: relative;
-    padding: 1.25rem;
-
-
-    .Lugar-mapa {
-      position: absolute;
-
-      padding: 1.25rem;
-
-      pointer-events: none;
-      z-index: 1000;
-      top: 0;
-      right: 0;
-      display: flex;
-
-      .mapa {
-        width: 1.875rem;
-        height: 1.875rem;
-      }
-
-      .modal-titulo {
-        font-size: 1.25rem;
-
-
-      }
-
-    }
-
-
-    .Departamento {
-      width: 30%;
-      min-height: 40vh;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-      border-radius: 3.125rem;
-      transition: scale .6s ease;
-      background: #e0e0e0;
-      box-shadow: -1.625rem -1.625rem 3.1875rem #989898,
-        1.625rem 1.625rem 3.1875rem #ffffff;
-
-
-
-      .Departamento-img {
-       
-        width: 100%;
-        height: 50vh;
-        border-top-right-radius: 1.25rem;
-        border-top-left-radius: 1.25rem;
-        object-fit: cover;
-
-
-
-      }
-
-
-
-      .Departamento-descripcion {
-        width: 100%;
-        min-height: 20vh;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        gap: .5rem;
-        padding: 1.25rem;
-        color: var(--color-texto);
-        border: var(--color-texto) 1px solid;
-        border-bottom-left-radius: 3.125rem;
-        border-bottom-right-radius: 3.125rem;
-
-        .Capital {
-          display: flex;
-          flex-flow: column wrap;
-          justify-content: center;
-
-
-        }
-
-      }
-    }
-
-    .Departamento:hover {
-      scale: 1.1;
-
-
-    }
-
-    .Destinos-mapa {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-
-      .mapsvg-svg {
-        path {
-          fill: var(--color-secundario);
-          transition: opacity 0.6s ease;
-
-        }
-
-        path:hover {
-          fill: var(--color-primario);
-        }
-
-        .departamento--activo {
-          fill: var(--color-terciario);
-          cursor: pointer;
-          opacity: 0.7;
-        }
-      }
-    }
-  }
-
-  .Regiones-info {
-    width: 100%;
-    min-height: 80vh;
-    display: none;
-  }
+}
+.Destinos .Regiones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  margin: 1.875rem 0 0 0;
+  position: relative;
+  padding: 1.25rem;
+}
+.Destinos .Regiones .Lugar-mapa {
+  position: absolute;
+  padding: 1.25rem;
+  pointer-events: none;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+.Destinos .Regiones .Lugar-mapa .mapa {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.Destinos .Regiones .Lugar-mapa .modal-titulo {
+  font-size: 1.25rem;
+}
+.Destinos .Regiones .Departamento {
+  width: 30%;
+  min-height: 40vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.125rem;
+  transition: scale 0.6s ease;
+  background: #e0e0e0;
+  box-shadow: -1.625rem -1.625rem 3.1875rem #989898, 1.625rem 1.625rem 3.1875rem #ffffff;
+}
+.Destinos .Regiones .Departamento .Departamento-img {
+  width: 100%;
+  height: 50vh;
+  border-top-right-radius: 1.25rem;
+  border-top-left-radius: 1.25rem;
+  object-fit: cover;
+}
+.Destinos .Regiones .Departamento .Departamento-descripcion {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  color: var(--color-texto);
+  border: var(--color-texto) 1px solid;
+  border-bottom-left-radius: 3.125rem;
+  border-bottom-right-radius: 3.125rem;
+}
+.Destinos .Regiones .Departamento .Departamento-descripcion .Capital {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.Destinos .Regiones .Departamento:hover {
+  scale: 1.1;
+}
+.Destinos .Regiones .Destinos-mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Destinos .Regiones .Destinos-mapa .mapsvg-svg path {
+  fill: var(--color-secundario);
+  transition: opacity 0.6s ease;
+}
+.Destinos .Regiones .Destinos-mapa .mapsvg-svg path:hover {
+  fill: var(--color-primario);
+}
+.Destinos .Regiones .Destinos-mapa .mapsvg-svg .departamento--activo {
+  fill: var(--color-terciario);
+  cursor: pointer;
+  opacity: 0.7;
+}
+.Destinos .Regiones-info {
+  width: 100%;
+  min-height: 80vh;
+  display: none;
 }
 
- /* ------ Info ------ */
-  /* Descripcion: Estilos para el bloque con svgs de información util y para el modal que sale 
-  al hacer click en alguno 
-  Estructura:  
-    - Info-util : 
-                            - Info-especifica
-                            - Info-img
-                            - isVisible
-                            - Info-superior
-                            - Info-superior-titulo
-                            - Info-superior-cerrar   
-                            - Info-superior-llegar-transportarse
-                            - Imperdibles-img
-                            - Bebidas-postres
-                            - Postres-img 
-   */
+/* ------ Info ------ */
+/* Descripcion: Estilos para el bloque con svgs de información util y para el modal que sale 
+al hacer click en alguno 
+Estructura:  
+  - Info-util : 
+                          - Info-especifica
+                          - Info-img
+                          - isVisible
+                          - Info-superior
+                          - Info-superior-titulo
+                          - Info-superior-cerrar   
+                          - Info-superior-llegar-transportarse
+                          - Imperdibles-img
+                          - Bebidas-postres
+                          - Postres-img 
+ */
 .Info {
   background: var(--color-primario);
-  box-shadow: 1.25rem 1.25rem 3.75rem #bebebe,
-    -1.25rem -1.25rem 3.75rem var(--color-fondo);
+  box-shadow: 1.25rem 1.25rem 3.75rem #bebebe, -1.25rem -1.25rem 3.75rem var(--color-fondo);
   margin: 1.25rem 0 0 0;
   border-radius: 1.25rem;
   min-height: 100vh;
@@ -470,325 +388,218 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-
-  .Info-util {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-
-    .Info-especifica {
-      opacity: 0;
-      transform: translateY(3.125rem);
-      min-height: 30vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      z-index: 1;
-      transition: scale .5s ease, opacity .5s ease, transform 0.5s ease;
-
-      .Info-img {
-        width: 6.25rem;
-        height: 6.25rem;
-        object-fit: cover;
-      }
-    }
-
-    .isVisible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .Info-especifica:hover {
-      scale: 1.2;
-    }
-
-    .Info-superior {
-      opacity: 0;
-      background-color: var(--color-fondo);
-      border-radius: .625rem;
-      box-shadow: 0 .25rem .5rem var(--sombra);
-      padding: 2rem;
-      width: 90%;
-      max-height: 100%;
-      position: absolute;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: start;
-      align-items: center;
-      margin: auto;
-
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      overflow-y: auto;
-
-
-
-      .Info-superior-titulo {
-        display: flex;
-        gap: 1.25rem;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--color-fondo);
-        border-radius: 3.125rem;
-
-
-
-        .Info-superior-h2 {
-          font-size: 1.8rem;
-          font-weight: bold;
-
-          margin-bottom: .9375rem 0 .9375rem 0;
-
-        }
-
-        .Info-superior-cerrar {
-          padding: 1.25rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: color .4s ease;
-        }
-
-        .Info-superior-cerrar:hover {
-          color: var(--color-terciario);
-        }
-
-      }
-
-
-
-      .Info-superior-llegar-transportarse {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        align-items: start;
-        gap: 1.25rem;
-        padding: .625rem;
-
-
-
-        .Cultura-img {
-          max-height: 11.25rem;
-          width: 50%;
-          object-fit: cover;
-          border-radius: 1.25rem;
-          margin: .625rem 0 0 0;
-          transition: scale .5s ease;
-        }
-
-        .Cultura-img:hover {
-          scale: 0.9;
-        }
-
-        .Imperdibles-img {
-          max-height: 11.25rem;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 1.25rem;
-          margin: .625rem 0 0 0;
-          max-width: 25rem;
-          transition: scale .6s ease;
-
-        }
-
-        .Imperdibles-img:hover {
-          scale: 0.9;
-        }
-
-        .Bebidas-postres {
-          min-height: 12.5rem;
-          display: flex;
-          gap: 2rem;
-          margin: 1.25rem 0 0 0;
-          width: 50%;
-          .Postres-img {
-            max-height: 11.25rem;
-            object-fit: cover;
-            border-radius: 1.25rem;
-            transition: scale .5s ease;
-          }
-          .Postres-img:hover{
-            scale: 0.9;
-          }
-
-        }
-
-      }
-
-    }
-
-    .Info-superior--visible {
-      opacity: 1;
-      z-index: 2;
-
-    }
-  }
 }
-
-
-
-
+.Info .Info-util {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.Info .Info-util .Info-especifica {
+  opacity: 0;
+  transform: translateY(3.125rem);
+  min-height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  transition: scale 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+.Info .Info-util .Info-especifica .Info-img {
+  width: 6.25rem;
+  height: 6.25rem;
+  object-fit: cover;
+}
+.Info .Info-util .isVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.Info .Info-util .Info-especifica:hover {
+  scale: 1.2;
+}
+.Info .Info-util .Info-superior {
+  opacity: 0;
+  background-color: var(--color-fondo);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem var(--sombra);
+  padding: 2rem;
+  width: 90%;
+  max-height: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+}
+.Info .Info-util .Info-superior .Info-superior-titulo {
+  display: flex;
+  gap: 1.25rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-fondo);
+  border-radius: 3.125rem;
+}
+.Info .Info-util .Info-superior .Info-superior-titulo .Info-superior-h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.9375rem 0 0.9375rem 0;
+}
+.Info .Info-util .Info-superior .Info-superior-titulo .Info-superior-cerrar {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.4s ease;
+}
+.Info .Info-util .Info-superior .Info-superior-titulo .Info-superior-cerrar:hover {
+  color: var(--color-terciario);
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 1.25rem;
+  padding: 0.625rem;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Cultura-img {
+  max-height: 11.25rem;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  margin: 0.625rem 0 0 0;
+  transition: scale 0.5s ease;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Cultura-img:hover {
+  scale: 0.9;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Imperdibles-img {
+  max-height: 11.25rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  margin: 0.625rem 0 0 0;
+  max-width: 25rem;
+  transition: scale 0.6s ease;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Imperdibles-img:hover {
+  scale: 0.9;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Bebidas-postres {
+  min-height: 12.5rem;
+  display: flex;
+  gap: 2rem;
+  margin: 1.25rem 0 0 0;
+  width: 50%;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Bebidas-postres .Postres-img {
+  max-height: 11.25rem;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  transition: scale 0.5s ease;
+}
+.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Bebidas-postres .Postres-img:hover {
+  scale: 0.9;
+}
+.Info .Info-util .Info-superior--visible {
+  opacity: 1;
+  z-index: 2;
+}
 
 /* Responsive */
 @media (max-width: 1100px) {
-  .Hero {
-    .Hero-h1 {
-      font-size: 5.375rem;
-    }
+  .Hero .Hero-h1 {
+    font-size: 5.375rem;
   }
-  .Destinos {
-    .Regiones {
-      .Departamento {
-        width: 40%;
-      }
-    }
+  .Destinos .Regiones .Departamento {
+    width: 40%;
   }
-
 }
-
 @media (max-width: 1000px) {
-  .Info {
-    .Info-util {
-      .Info-superior {
-        width: 100%;
-      }
-    }
+  .Info .Info-util .Info-superior {
+    width: 100%;
   }
 }
-
 @media (max-width: 992px) {
-
-
   .Hero {
     flex-direction: column;
-    .Hero-h1 {
-      font-size: 8.375rem;
-    }
-
   }
-
-  .Destinos {
-    .Regiones {
-      flex-direction: column-reverse;
-
-      .Departamento {
-        width: 70%;
-      }
-    }
+  .Hero .Hero-h1 {
+    font-size: 8.375rem;
+  }
+  .Destinos .Regiones {
+    flex-direction: column-reverse;
+  }
+  .Destinos .Regiones .Departamento {
+    width: 70%;
   }
 }
-
 @media (max-width: 800px) {
-  .Info {
-    .Info-util {
-       .Info-superior {
-        .Info-superior-llegar-transportarse {
-          flex-direction: column;
-          width: 100%;
-
-          .Info-superior-llegar-ul {
-            width: 100%;
-          }
-        }
-      }
-    }
+  .Info .Info-util .Info-superior .Info-superior-llegar-transportarse {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Info-superior-llegar-ul {
+    width: 100%;
   }
 }
-
 @media (max-width: 700px) {
-  .Hero {
-    .Hero-h1 {
-
-      font-size: 6.25rem;
-
-    }
+  .Hero .Hero-h1 {
+    font-size: 6.25rem;
   }
-
-  
-
-    .Info {
-      .Info-util {
-        grid-template-columns: repeat(2, 1fr);
-
-      }
-    }
-
-
-  
-
+  .Info .Info-util {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-  @media (max-width: 500px) {
-    .Hero {
-      padding: 0;
-      .Hero-h1 {
-        font-size: 4rem;
-        min-height: 30vh;
-
-      }
-    }
-
-    .Destinos {
-      padding: 1.25rem;
-      .Regiones {
-        .Destinos-mapa {
-          max-height: 25rem;
-        }
-
-        .Departamento {
-          width: 90%;
-        }
-      }
-    }
-
-    .Info {
-      .Info-util {
-        grid-template-columns: 1fr;
-
-        .Info-superior {
-          height: 100%;
-
-        }
-
-      }
-
-    }
+@media (max-width: 500px) {
+  .Hero {
+    padding: 0;
   }
-
-
+  .Hero .Hero-h1 {
+    font-size: 4rem;
+    min-height: 30vh;
+  }
+  .Destinos {
+    padding: 1.25rem;
+  }
+  .Destinos .Regiones .Destinos-mapa {
+    max-height: 25rem;
+  }
+  .Destinos .Regiones .Departamento {
+    width: 90%;
+  }
+  .Info .Info-util {
+    grid-template-columns: 1fr;
+  }
+  .Info .Info-util .Info-superior {
+    height: 100%;
+  }
+}
 @media (max-width: 320px) {
-  .Hero {
-    .Hero-h1 {
-      font-size: 5.375rem;
-      min-height: 30vh;
-    }
+  .Hero .Hero-h1 {
+    font-size: 5.375rem;
+    min-height: 30vh;
   }
 }
-
-
 @keyframes upDown {
-
   0% {
-    transform: translateY(.625rem) rotate(-15deg);
-
+    transform: translateY(0.625rem) rotate(-15deg);
   }
-
   50% {
     transform: translateY(-0.625rem) rotate(-15deg);
-
   }
-
   100% {
-    transform: translateY(.625rem) rotate(-15deg);
-
+    transform: translateY(0.625rem) rotate(-15deg);
   }
-
 }
+

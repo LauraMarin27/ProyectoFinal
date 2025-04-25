@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*───────────────────────────────────────────────────────────────────────*\
   global.css
   - Reset
@@ -7,399 +8,342 @@
   - Footer
   - Responsive
 \*───────────────────────────────────────────────────────────────────────*/
-
 :root {
-    font-size : 100%;
-    font-family : system-ui, sans-serif;
-    scroll-behavior : smooth;
-  }
-  * , *::before , *::after {
-    margin : 0;
-    padding : 0;
-    border : 0;
-    box-sizing : border-box;
-    vertical-align : baseline;
-  }
-  *::before , *::after {
-    display : block;
-  }
-  img , picture , video , iframe , figure , canvas {
-    max-width : 100%;
-    display : block;
-    width : 100%;
-    height : initial;
-    object-fit : cover;
-    object-position : center center;
-  }
-  a {
-    display : block;
-    text-decoration : none;
-    color : inherit;
-    font :  inherit;
-  }
-  p a {
-    display : inline;
-  }
-  li , menu, summary {
-    list-style-type : none;
-  }
-  ol {
-    counter-reset : revert;
-  }
-  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , blockquote , i , b , u , em , pre , code , mark , del {
-    font :  inherit;
-    text-decoration :  none;
-    color : inherit;
-    overflow-wrap : break-word;
-    text-wrap : pretty;
-  }
-  mark {
-    background-color : transparent;
-  }
-  blockquote::before , blockquote::after , q::before , q::after {
-    content : none;
-  }
-  form , input , textarea , select , button , label {
-    font :  inherit;
-    hyphens : auto;
-    background-color : transparent;
-    color : inherit;
-    display : block;
-    appearance : none;
-  }
-  fieldset {
-    border : none;
-  }
-  ::placeholder {
-    color : unset;
-  }
-  button , label {
-    cursor : pointer;
-  }
-  table , tr , td , th , tbody , thead , tfoot {
-    border-collapse : collapse;
-    border-spacing : 0;
-    font : inherit;
-  }
-  svg {
-    width : 100%;
-    display : block;
-    fill : currentColor;
-  }
+  font-size: 100%;
+  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
 
-  /* Custom Properties */
-  :root {
-    /* Color para textos  y border  */
-    --color-negro: #000000; 
-    /* Color para mapa  */
-    --color-gris-claro: #ccc; 
-   
-  }
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
 
+*::before, *::after {
+  display: block;
+}
 
-  body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-negro);
-  }
-  
+img, picture, video, iframe, figure, canvas {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: initial;
+  object-fit: cover;
+  object-position: center center;
+}
 
-  h1 {
-    font-family: 'Yeseva One', cursive;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
-    font-family: 'Yeseva One', cursive;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-  
-  h3 {
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-  }
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
 
-  h4 {
-    font-family: 'Yeseva One', cursive;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
+p a {
+  display: inline;
+}
 
-  /* ------ Header ------ */
-  /* Descripcion: Estilos para el Header que va a tener todas las paginas de la web 
-  Estructura:  
-    - Header-logo
-    - Header-abrir
-    - Header-nav :
-                   - Header-ul
-                   - Header-cerrar
-   */
+li, menu, summary {
+  list-style-type: none;
+}
 
+ol {
+  counter-reset: revert;
+}
 
+h1, h2, h3, h4, h5, h6, p, span, a, blockquote, i, b, u, em, pre, code, mark, del {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+mark {
+  background-color: transparent;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
+}
+
+form, input, textarea, select, button, label {
+  font: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  appearance: none;
+}
+
+fieldset {
+  border: none;
+}
+
+::placeholder {
+  color: unset;
+}
+
+button, label {
+  cursor: pointer;
+}
+
+table, tr, td, th, tbody, thead, tfoot {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: inherit;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Custom Properties */
+:root {
+  /* Color para textos  y border  */
+  --color-negro: #000000;
+  /* Color para mapa  */
+  --color-gris-claro: #ccc;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-negro);
+}
+
+h1 {
+  font-family: "Yeseva One", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: "Yeseva One", cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-family: "Yeseva One", cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ------ Header ------ */
+/* Descripcion: Estilos para el Header que va a tener todas las paginas de la web 
+Estructura:  
+  - Header-logo
+  - Header-abrir
+  - Header-nav :
+                 - Header-ul
+                 - Header-cerrar
+ */
+.Header {
+  min-height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.Header .Header-logo {
+  margin: 0 0 0 3.125rem;
+}
+.Header .Header-abrir {
+  display: none;
+}
+.Header .Header-nav .Header-ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 0 6.25rem 0 0;
+}
+.Header .Header-nav .Header-cerrar {
+  display: none;
+}
+
+.Header::after {
+  content: "";
+  width: 100%;
+  min-height: 0.625rem;
+  background: linear-gradient(to right, yellow 33%, blue 33% 66%, red 66% 100%);
+}
+
+/* ------ Footer ------ */
+/* Descripcion: Estilos para el Footer que va a tener todas las paginas de la web 
+Estructura:  
+  - Footer-mapa:
+                 - Footer-img
+  - Footer-social-enlaces :
+                  - Footer-social
+                  - Footer-social-ul
+                  - Footer-social-li
+                  - Footer-social-media
+  - Footer-enlaces
+ */
+.Footer {
+  /*Degradado hecho con ChatGpt*/
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url(../assets/footer-img.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  object-fit: cover;
+  min-height: 80vh;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.Footer .Footer-mapa {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.Footer .Footer-mapa .Footer-img {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+.Footer .Footer-social-enlaces {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Footer .Footer-social-enlaces .Footer-social .Footer-social-ul {
+  display: flex;
+  gap: 2.5rem;
+}
+.Footer .Footer-social-enlaces .Footer-social .Footer-social-ul .Footer-social-li .Footer-social-media {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.Footer .Footer-social-enlaces .Footer-social .Footer-social-ul .Footer-social-li .Footer-social-media-tiktok {
+  padding: 0.3125rem;
+}
+.Footer .Footer-social-enlaces .Footer-enlaces {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.Footer .Footer-mapa::after, .Footer .Footer-mapa::before {
+  content: "";
+  width: 50%;
+  height: 0.125rem;
+  background-color: var(--color-gris-claro);
+  margin: 0 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .Header {
-
-    min-height: 15vh;
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-  
-    .Header-logo {
-   
-      margin: 0 0 0 3.125rem;
-    }
-  
-    .Header-abrir {
-      display: none;
-    
-    }
-  
-    .Header-nav {
-      .Header-ul {
-   
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        margin: 0 6.25rem 0 0;
-      }
-  
-      .Header-cerrar {
-        display: none;
-      }
-    }
   }
-  
-  .Header::after {
+  .Header .Header-abrir {
+    display: flex;
+    z-index: 2;
+    padding: 2rem;
+  }
+  .Header .Header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 30%;
+    background-color: white;
+    opacity: 0;
+    padding: 1rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .Header .Header-nav .Header-cerrar {
+    display: flex;
+    padding: 0.9375rem;
+  }
+  .Header .Header-nav .Header-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+  }
+  .Header .Header-nav .Header-ul .Header-li::after {
     content: "";
     width: 100%;
-    min-height: 0.625rem;
+    height: 0.0625rem;
+    background-color: black;
+  }
+  .Header .Header-nav .Header-ul::after {
+    content: "";
+    width: 50%;
+    height: 0.625rem;
+    display: flex;
+    align-items: end;
     background: linear-gradient(to right, yellow 33%, blue 33% 66%, red 66% 100%);
   }
-
-
-  /* ------ Footer ------ */
-  /* Descripcion: Estilos para el Footer que va a tener todas las paginas de la web 
-  Estructura:  
-    - Footer-mapa:
-                   - Footer-img
-    - Footer-social-enlaces :
-                    - Footer-social
-                    - Footer-social-ul
-                    - Footer-social-li
-                    - Footer-social-media
-    - Footer-enlaces
-   */
-  .Footer {
-    /*Degradado hecho con ChatGpt*/
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)),
-    url(../assets/footer-img.webp); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    width: 100%;
-    object-fit: cover;
-    min-height: 80vh;
-    color: white;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+  .Header .Header-nav--visible {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+@media (max-width: 700px) {
+  .Header .Header-nav {
     align-items: center;
-  
-    .Footer-mapa{
-      width: 100%; 
-      display: flex;
-      align-items: center; 
-      justify-content: center; 
-      gap: 1rem; 
-  
-      .Footer-img{
-        width: 6.25rem;
-        height: 6.25rem;
-       
-      }
-  
-  
-    }
-  
-  .Footer-social-enlaces{
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    .Footer-social{
-      .Footer-social-ul{
-        display: flex;
-        gap: 2.5rem;
-  
-        .Footer-social-li{
-          .Footer-social-media{
-            width: 3.125rem;
-            height: 3.125rem;
-            
-            
-          }
-  
-          .Footer-social-media-tiktok{
-            padding: .3125rem;
-          }
-        }
-      }
-    }
-  
-  
-    .Footer-enlaces{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items:start;
-     
-    }
+    gap: 1rem;
   }
-  
-    .Footer-mapa::after, .Footer-mapa::before{
-      content: "";
-      width: 50%;
-      height: .125rem;
-      background-color: var(--color-gris-claro);
-      margin: 0 1.25rem;
-   
-    }
-   
-   
+  .Footer .Footer-social-enlaces {
+    flex-direction: column-reverse;
   }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .Header {
-      width: 100%;
-  
-      .Header-abrir {
-        display: flex;
-        z-index: 2;
-        padding: 2rem;
-      }
-  
-      .Header-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-  
-        width: 100%;
-        max-width: 30%;
-        background-color: white;
-        opacity: 0;
-        padding: 1rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-  
-        .Header-cerrar {
-          display: flex;
-          padding: .9375rem;
-        }
-        .Header-ul {
-          display: flex;
-          flex-direction: column;
-          align-items: end;
-          justify-content: center;
-  
-          width: 100%;
-  
-          .Header-li::after {
-            content: "";
-            width: 100%;
-            height: 0.0625rem;
-  
-            background-color: black;
-          }
-        }
-  
-        .Header-ul::after {
-          content: "";
-          width: 50%;
-          height: 0.625rem;
-          display: flex;
-          align-items: end;
-          background: linear-gradient(
-            to right,
-            yellow 33%,
-            blue 33% 66%,
-            red 66% 100%
-          );
-        }
-      }
-  
-      .Header-nav--visible {
-        opacity: 1;
-        z-index: 2;
-      }
-    }
+  .Footer .Footer-social-enlaces .Footer-enlaces {
+    align-items: start;
+    margin: 0 0 1.25rem 0;
   }
+  .Footer .Footer-social-enlaces .Footer-social .Footer-social-ul .Footer-social-li .Footer-social-media {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .Header .Header-nav {
+    max-width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .Header .Header-nav {
+    max-width: 50%;
+  }
+}
 
 
-  
-  @media (max-width: 700px) {
-
-    .Header {
-      .Header-nav {
-          align-items: center;
-          gap: 1rem;
-      }
-    }
-    .Footer {
-      .Footer-social-enlaces {
-          flex-direction: column-reverse;
-    
-          .Footer-enlaces {
-            align-items: start;
-            margin: 0 0 1.25rem 0;
-        }
-    
-        .Footer-social{
-          .Footer-social-ul{
-            .Footer-social-li{
-              .Footer-social-media{
-                width: 2.5rem;
-                height: 2.5rem; 
-              }
-            }
-          }
-        }
-      } 
-    }
-  }
-
-  @media (max-width: 500px) {
-    .Header {
-      .Header-nav {
-        max-width: 40%;
-      }
-    } 
-  }
-
-  @media (max-width: 400px) {
-    .Header {
-      .Header-nav {
-        max-width: 50%;
-      }
-    }
-  }
