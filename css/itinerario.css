@@ -166,17 +166,19 @@ body {
 /* ------ Cuestionario ------ */
 /* Descripcion: Estilos para el cuestionario de intereses y resultados
 Estructura:  
-  - Cuestionario-preguntas: 
-                          - Cuestionario-form
-                          - Cuestionario-ul
-                          - Cuestionario-li
-                          - Cuestionario-select
-                          - Cuestionario-label
-                          - tipo-experiencia
-                          - Cuestionario-boton
-  - Resultado :
-              - Resultado-cerrar
-              - Resultado-dias
+  - Cuestionario-preguntas
+  - Cuestionario-form
+  - Cuestionario-ul
+  - Cuestionario-li
+  - Cuestionario-select
+  - Cuestionario-label
+  - tipo-experiencia
+  - Cuestionario-boton
+  - Cuestionario-boton-button
+  - Resultado 
+  - Resultado-cerrar
+  - Resultado-dias
+  - Resultado-dia
   - Mostrar (Mostrar los resultados) :        
  */
 .Cuestionario {
@@ -259,7 +261,7 @@ Estructura:
   justify-content: center;
   align-items: center;
 }
-.Cuestionario-boton .button {
+.Cuestionario-boton-button {
   margin: 1.5rem;
   padding: 0.9375rem 2rem;
   border-radius: 0.9375rem;
@@ -270,11 +272,11 @@ Estructura:
   box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.1);
   transition: scale 0.5s ease;
 }
-.Cuestionario-boton .button:hover {
+.Cuestionario-boton-button:hover {
   background: rgb(255, 255, 255);
   scale: 1.1;
 }
-.Cuestionario .Resultado {
+.Resultado {
   width: 80%;
   min-height: 80vh;
   backdrop-filter: blur(0.9375rem);
@@ -296,14 +298,12 @@ Estructura:
   display: flex;
   justify-content: end;
 }
-.Resultado-cerrar .cerrar {
+.Resultado-cerrar-button {
   padding: 0.9375rem;
   border-radius: 0.625rem;
   border: 1px solid var(--color-borde);
 }
-.Resultado-cerrar .cerrar:hover {
-  padding: 0.625rem;
-  border-radius: 0.625rem;
+.Resultado-cerrar-button:hover {
   background-color: red;
   color: white;
 }
@@ -324,19 +324,19 @@ Estructura:
   background: var(--color-fondo-destacado);
   scale: 1.05;
 }
-.Cuestionario .Mostrar {
+.Mostrar {
   display: flex;
   animation: fadeIn 0.4s ease;
 }
 
 /* Responsive */
 @media (max-width: 700px) {
-  .Cuestionario .Resultado {
+  .Resultado {
     width: 90%;
   }
 }
 @media (max-width: 500px) {
-  .Cuestionario .Resultado {
+  .Resultado {
     width: 100%;
     max-height: 46.0625rem;
   }

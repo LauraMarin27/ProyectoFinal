@@ -21,7 +21,7 @@
 // Todas las ventanas de resultados que se mostrarán
 const ventanaResultado = document.querySelectorAll(`.Resultado`)
 // Botones para cerrar los resultados
-const botonCerrar = document.querySelectorAll(`.cerrar`)
+const botonCerrar = document.querySelectorAll(`.Resultado-cerrar-button`)
 // Botones de generar mi itinerario
 const botonMostrarResultados = document.querySelectorAll(`.Cuestionario-boton button`)
 // Iconos de experiencia (playa, ciudad, naturaleza , combinado)

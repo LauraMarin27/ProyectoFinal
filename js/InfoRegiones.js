@@ -48,14 +48,14 @@ tabs.forEach((_, i) => {
     tabs[i].addEventListener(`click`, () => {
 
         tabs.forEach((_, j) => {
-            tabs[j].classList.remove('active')
-            tabContents[j].classList.remove('active')
+            tabs[j].classList.remove('Regiones-tabs-button--active')
+            tabContents[j].classList.remove('Regiones-content--active')
 
         })
 
-        tabs[i].classList.add('active')
+        tabs[i].classList.add('Regiones-tabs-button--active')
 
-        tabContents[i].classList.add('active')
+        tabContents[i].classList.add('Regiones-content--active')
 
     })
 })
@@ -159,10 +159,10 @@ document.querySelectorAll('.Regiones-content').forEach((regionContent) => {
         let operacion = contador * -20
         grande.style.transform = `translateX(${operacion}%)`
         puntos.forEach((_, i) => {
-            puntos[i].classList.remove(`activo`)
+            puntos[i].classList.remove(`punto--activo`)
 
             if (i === contador) {
-                puntos[i].classList.add(`activo`)
+                puntos[i].classList.add(`punto--activo`)
             }
 
         })

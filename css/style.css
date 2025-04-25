@@ -155,7 +155,7 @@ body {
   --color-primario: rgb(252, 209, 22);
   /* Color representativo de la bandera de Colombia para mapa*/
   --color-secundario: rgb(0, 56, 168);
-  /* Color para mapa y boton de cerrar*/
+  /* Color boton de cerrar*/
   --color-terciario: rgb(206, 17, 38);
   /* Color de fondo*/
   --color-fondo: #f9f9f9;
@@ -171,13 +171,13 @@ body {
 /* Descripcion: Estilos para el Hero , donde esta el texto decorativo y el carrousel
 Estructura:  
   - Hero-h1 
-  - Hero-carrousel:
-                    - Hero-imagenes
-                    - Hero-img 
-                    - Hero-arrows
-                    - Hero-arrow 
-                    - Hero-arrow--prev
-                    - Hero-arrow--next
+  - Hero-carrousel
+  - Hero-imagenes
+  - Hero-img 
+  - Hero-arrows
+  - Hero-arrow 
+  - Hero-arrow--prev
+  - Hero-arrow--next
  */
 .Hero {
   background-image: url(../assets/hero-img.webp);
@@ -192,7 +192,7 @@ Estructura:
   gap: 2rem;
   padding: 1rem;
 }
-.Hero .Hero-h1 {
+.Hero-h1 {
   font-family: var(--font-decorativa);
   font-weight: 400;
   font-size: 8.375rem;
@@ -206,7 +206,7 @@ Estructura:
   margin-bottom: 1.25rem;
   animation: upDown 5s ease 0s infinite both;
 }
-.Hero .Hero-carrousel {
+.Hero-carrousel {
   max-width: 37.5rem;
   background-color: var(--color-fondo);
   margin: auto;
@@ -216,21 +216,21 @@ Estructura:
   overflow: hidden;
   scroll-snap-type: x mandatory;
 }
-.Hero .Hero-carrousel .Hero-imagenes {
+.Hero-imagenes {
   min-height: 12.5rem;
   display: grid;
 }
-.Hero .Hero-carrousel .Hero-imagenes .Hero-img {
+.Hero-img {
   height: 18.75rem;
   scroll-snap-align: center;
 }
-.Hero .Hero-carrousel .Hero-arrows {
+.Hero-arrows {
   display: flex;
   gap: 3rem;
   justify-content: center;
   align-items: center;
 }
-.Hero .Hero-carrousel .Hero-arrows .Hero-arrow {
+.Hero-arrow {
   --size: 3rem;
   width: var(--size);
   height: var(--size);
@@ -243,34 +243,33 @@ Estructura:
   margin: auto 1.25rem;
   cursor: pointer;
 }
-.Hero .Hero-carrousel .Hero-arrows .Hero-arrow--prev {
+.Hero-arrow--prev {
   left: 0;
 }
-.Hero .Hero-carrousel .Hero-arrows .Hero-arrow--next {
+.Hero-arrow--next {
   right: 0;
 }
 
 /* ------ Destinos ------ */
 /* Descripcion: Estilos para el mapa y la info que describe el departamento seleccionado
 Estructura:  
-  - Regiones:
-            - Lugar-mapa
-            - mapa
-            - modal-titulo
-            - Departamento
-            - Departamento-img
-            - Departamento-descripcion
-            - Capital
-            - Destinos-mapa
-            - mapsvg-svg
+  - Regiones
+  - Lugar-mapa
+  - mapa
+  - modal-titulo
+  - Departamento
+  - Departamento-img
+  - Departamento-descripcion
+  - Capital
+  - Destinos-mapa
+  - mapsvg-svg
   - Regiones-info: 
-                  - 
  */
 .Destinos {
   min-height: 100vh;
   padding: 3.125rem;
 }
-.Destinos .Regiones {
+.Regiones {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,7 +279,7 @@ Estructura:
   position: relative;
   padding: 1.25rem;
 }
-.Destinos .Regiones .Lugar-mapa {
+.Lugar-mapa {
   position: absolute;
   padding: 1.25rem;
   pointer-events: none;
@@ -289,14 +288,14 @@ Estructura:
   right: 0;
   display: flex;
 }
-.Destinos .Regiones .Lugar-mapa .mapa {
+.mapa {
   width: 1.875rem;
   height: 1.875rem;
 }
-.Destinos .Regiones .Lugar-mapa .modal-titulo {
+.modal-titulo {
   font-size: 1.25rem;
 }
-.Destinos .Regiones .Departamento {
+.Departamento {
   width: 30%;
   min-height: 40vh;
   display: flex;
@@ -308,14 +307,14 @@ Estructura:
   background: #e0e0e0;
   box-shadow: -1.625rem -1.625rem 3.1875rem #989898, 1.625rem 1.625rem 3.1875rem #ffffff;
 }
-.Destinos .Regiones .Departamento .Departamento-img {
+.Departamento-img {
   width: 100%;
   height: 50vh;
   border-top-right-radius: 1.25rem;
   border-top-left-radius: 1.25rem;
   object-fit: cover;
 }
-.Destinos .Regiones .Departamento .Departamento-descripcion {
+.Departamento-descripcion {
   width: 100%;
   min-height: 20vh;
   display: flex;
@@ -328,32 +327,32 @@ Estructura:
   border-bottom-left-radius: 3.125rem;
   border-bottom-right-radius: 3.125rem;
 }
-.Destinos .Regiones .Departamento .Departamento-descripcion .Capital {
+.Capital {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
 }
-.Destinos .Regiones .Departamento:hover {
+.Departamento:hover {
   scale: 1.1;
 }
-.Destinos .Regiones .Destinos-mapa {
+.Destinos-mapa {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Destinos .Regiones .Destinos-mapa .mapsvg-svg path {
+.mapsvg-svg path {
   fill: var(--color-secundario);
   transition: opacity 0.6s ease;
 }
-.Destinos .Regiones .Destinos-mapa .mapsvg-svg path:hover {
+.mapsvg-svg path:hover {
   fill: var(--color-primario);
 }
-.Destinos .Regiones .Destinos-mapa .mapsvg-svg .departamento--activo {
+.departamento--activo {
   fill: var(--color-terciario);
   cursor: pointer;
   opacity: 0.7;
 }
-.Destinos .Regiones-info {
+.Regiones-info {
   width: 100%;
   min-height: 80vh;
   display: none;
@@ -364,16 +363,16 @@ Estructura:
 al hacer click en alguno 
 Estructura:  
   - Info-util : 
-                          - Info-especifica
-                          - Info-img
-                          - isVisible
-                          - Info-superior
-                          - Info-superior-titulo
-                          - Info-superior-cerrar   
-                          - Info-superior-llegar-transportarse
-                          - Imperdibles-img
-                          - Bebidas-postres
-                          - Postres-img 
+  - Info-especifica
+  - Info-img
+  - isVisible
+  - Info-superior
+  - Info-superior-titulo
+  - Info-superior-cerrar   
+  - Info-superior-llegar-transportarse
+  - Imperdibles-img
+  - Bebidas-postres
+  - Postres-img 
  */
 .Info {
   background: var(--color-primario);
@@ -389,14 +388,14 @@ Estructura:
   align-items: center;
   position: relative;
 }
-.Info .Info-util {
+.Info-util {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   align-items: center;
   justify-content: center;
 }
-.Info .Info-util .Info-especifica {
+.Info-especifica {
   opacity: 0;
   transform: translateY(3.125rem);
   min-height: 30vh;
@@ -409,19 +408,19 @@ Estructura:
   z-index: 1;
   transition: scale 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
-.Info .Info-util .Info-especifica .Info-img {
+.Info-img {
   width: 6.25rem;
   height: 6.25rem;
   object-fit: cover;
 }
-.Info .Info-util .isVisible {
+.isVisible {
   opacity: 1;
   transform: translateY(0);
 }
-.Info .Info-util .Info-especifica:hover {
+.Info-especifica:hover {
   scale: 1.2;
 }
-.Info .Info-util .Info-superior {
+.Info-superior {
   opacity: 0;
   background-color: var(--color-fondo);
   border-radius: 0.625rem;
@@ -440,7 +439,7 @@ Estructura:
   transform: translate(-50%, -50%);
   overflow-y: auto;
 }
-.Info .Info-util .Info-superior .Info-superior-titulo {
+.Info-superior-titulo {
   display: flex;
   gap: 1.25rem;
   width: 100%;
@@ -449,22 +448,22 @@ Estructura:
   background-color: var(--color-fondo);
   border-radius: 3.125rem;
 }
-.Info .Info-util .Info-superior .Info-superior-titulo .Info-superior-h2 {
+.Info-superior-h2 {
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0.9375rem 0 0.9375rem 0;
 }
-.Info .Info-util .Info-superior .Info-superior-titulo .Info-superior-cerrar {
+.Info-superior-cerrar {
   padding: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: color 0.4s ease;
 }
-.Info .Info-util .Info-superior .Info-superior-titulo .Info-superior-cerrar:hover {
+.Info-superior-cerrar:hover {
   color: var(--color-terciario);
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse {
+.Info-superior-llegar-transportarse {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -472,7 +471,7 @@ Estructura:
   gap: 1.25rem;
   padding: 0.625rem;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Cultura-img {
+.Cultura-img {
   max-height: 11.25rem;
   width: 50%;
   object-fit: cover;
@@ -480,10 +479,10 @@ Estructura:
   margin: 0.625rem 0 0 0;
   transition: scale 0.5s ease;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Cultura-img:hover {
+.Cultura-img:hover {
   scale: 0.9;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Imperdibles-img {
+.Imperdibles-img {
   max-height: 11.25rem;
   width: 100%;
   object-fit: cover;
@@ -492,41 +491,41 @@ Estructura:
   max-width: 25rem;
   transition: scale 0.6s ease;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Imperdibles-img:hover {
+.Imperdibles-img:hover {
   scale: 0.9;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Bebidas-postres {
+.Bebidas-postres {
   min-height: 12.5rem;
   display: flex;
   gap: 2rem;
   margin: 1.25rem 0 0 0;
   width: 50%;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Bebidas-postres .Postres-img {
+.Postres-img {
   max-height: 11.25rem;
   object-fit: cover;
   border-radius: 1.25rem;
   transition: scale 0.5s ease;
 }
-.Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Bebidas-postres .Postres-img:hover {
+.Postres-img:hover {
   scale: 0.9;
 }
-.Info .Info-util .Info-superior--visible {
+.Info-superior--visible {
   opacity: 1;
   z-index: 2;
 }
 
 /* Responsive */
 @media (max-width: 1100px) {
-  .Hero .Hero-h1 {
+ .Hero-h1 {
     font-size: 5.375rem;
   }
-  .Destinos .Regiones .Departamento {
+  .Departamento {
     width: 40%;
   }
 }
 @media (max-width: 1000px) {
-  .Info .Info-util .Info-superior {
+  .Info-superior {
     width: 100%;
   }
 }
@@ -534,30 +533,30 @@ Estructura:
   .Hero {
     flex-direction: column;
   }
-  .Hero .Hero-h1 {
+  .Hero-h1 {
     font-size: 8.375rem;
   }
-  .Destinos .Regiones {
+  .Regiones {
     flex-direction: column-reverse;
   }
-  .Destinos .Regiones .Departamento {
+  .Departamento {
     width: 70%;
   }
 }
 @media (max-width: 800px) {
-  .Info .Info-util .Info-superior .Info-superior-llegar-transportarse {
+  .Info-superior-llegar-transportarse {
     flex-direction: column;
     width: 100%;
   }
-  .Info .Info-util .Info-superior .Info-superior-llegar-transportarse .Info-superior-llegar-ul {
+  .Info-superior-llegar-ul {
     width: 100%;
   }
 }
 @media (max-width: 700px) {
-  .Hero .Hero-h1 {
+  .Hero-h1 {
     font-size: 6.25rem;
   }
-  .Info .Info-util {
+  .Info-util {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -565,28 +564,28 @@ Estructura:
   .Hero {
     padding: 0;
   }
-  .Hero .Hero-h1 {
+ .Hero-h1 {
     font-size: 4rem;
     min-height: 30vh;
   }
   .Destinos {
     padding: 1.25rem;
   }
-  .Destinos .Regiones .Destinos-mapa {
+  .Destinos-mapa {
     max-height: 25rem;
   }
-  .Destinos .Regiones .Departamento {
+  .Departamento {
     width: 90%;
   }
-  .Info .Info-util {
+ .Info-util {
     grid-template-columns: 1fr;
   }
-  .Info .Info-util .Info-superior {
+ .Info-superior {
     height: 100%;
   }
 }
 @media (max-width: 320px) {
-  .Hero .Hero-h1 {
+  .Hero-h1 {
     font-size: 5.375rem;
     min-height: 30vh;
   }
