@@ -415,7 +415,7 @@ Estructura:
   transition: scale 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 .Info-img {
-  width: 5rem;
+  width: 6rem;
   height: 6.25rem;
   object-fit: cover;
 }
