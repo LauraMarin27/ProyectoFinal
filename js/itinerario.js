@@ -23,11 +23,21 @@ const ventanaResultado = document.querySelectorAll(`.Resultado`)
 // Botones para cerrar los resultados
 const botonCerrar = document.querySelectorAll(`.Resultado-cerrar-button`)
 // Botones de generar mi itinerario
-const botonMostrarResultados = document.querySelectorAll(`.Cuestionario-boton button`)
+const botonMostrarResultados = document.querySelectorAll(`.Cuestionario-boton-button`)
 // Iconos de experiencia (playa, ciudad, naturaleza , combinado)
 const tipoExperiencia = document.querySelectorAll(`.icono-nombre`)
 // Input de selección de duración
 const duracion = document.getElementById(`duracion`)
+const opcion = document.querySelectorAll(`.opcion`)
+
+
+
+opcion.forEach((_,i)=>{
+  opcion[i].addEventListener(`click`, ()=>{
+    console.log(opcion[i].id)
+  })
+})
+
 
 
 /**
@@ -42,10 +52,12 @@ botonMostrarResultados.forEach((_, i) => {
     e.preventDefault()
 
     // Valor del tipo de experiencia seleccionado por el usuario (playa, ciudad, etc.)
-    const tipoSeleccionado = document.querySelector('input[name="tipo"]:checked').value
+    const tipoSeleccionado = document.querySelector('input[name="tipo"]:checked').value;
+    console.log(tipoSeleccionado)
 
     // Valor de duración seleccionada por el usuario (menos-semana, una-semana, etc.)
     const duracionSeleccionada = duracion.value
+    console.log(duracionSeleccionada)
 
     // Mostrar resultado para tipo "playa"
     if (tipoSeleccionado === 'playa' && duracionSeleccionada === 'menos-semana') {

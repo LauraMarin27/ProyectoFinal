@@ -16,6 +16,27 @@ Estructura general:
     <link rel="stylesheet" href="../css/global.css">
     <script src="../js/global.js" defer></script>
     <script src="../js/itinerario.js" defer></script>
+    <link rel="icon" type="image/vnd.icon" href="/assets/favicon.ico">
+    <!-- Primary Meta Tags -->
+
+<meta name="title" content="Colombia | El país de la belleza" />
+<meta name="description" content="Descubre la belleza de Colombia a través de sus destinos turísticos, gastronomía, fiestas tradicionales y todo lo que necesitas saber para planificar tu viaje. Explora sus paisajes, cultura y más." />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://metatags.io/" />
+<meta property="og:title" content="Colombia | El país de la belleza" />
+<meta property="og:description" content="Descubre la belleza de Colombia a través de sus destinos turísticos, gastronomía, fiestas tradicionales y todo lo que necesitas saber para planificar tu viaje. Explora sus paisajes, cultura y más." />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://metatags.io/" />
+<meta property="twitter:title" content="Colombia | El país de la belleza" />
+<meta property="twitter:description" content="Descubre la belleza de Colombia a través de sus destinos turísticos, gastronomía, fiestas tradicionales y todo lo que necesitas saber para planificar tu viaje. Explora sus paisajes, cultura y más." />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
 
 </head>
 
@@ -88,49 +109,48 @@ Estructura general:
                           ¿Qué tipo de experiencia prefieres?
                         </label>
                   
+                        <!-- En la parte de onclick="document.getElementById..., me he ayudado con ChatGpt
+                         Debido a que inicialmente habia hecho este bloque con un label , pero me generaba error 
+                         de W3school , asi que lo cambie por un div , pero al hacerlo de esta manera ya no me detectaba el checked.
+                         por esta razón dentro del propio div he agregado la propiedad onClick -->
                         <div class="tipo-experiencia">
-
+                          <!-- Playa -->
                           <div class="opcion">
-                            <input type="radio" name="tipo" value="playa" id="playa" checked>
-                            <div >
-                              <div class="icono-nombre seleccionado">
-                                <img src="../assets/playa.svg" alt="Playa" class="tipo-experiencia-icono" loading="lazy">
-                                <label class="nombre-img">Playa</label>
-                              </div>
+                            <input type="radio" name="tipo" value="playa" id="playa">
+                            <div class="icono-nombre" onclick="document.getElementById('playa').click()">
+                              <img src="../assets/playa.svg" alt="Playa" class="tipo-experiencia-icono" loading="lazy">
+                              <div class="nombre-img">Playa</div>
                             </div>
                           </div>
                         
+                          <!-- Naturaleza -->
                           <div class="opcion">
                             <input type="radio" name="tipo" value="naturaleza" id="naturaleza">
-                            <div >
-                              <div class="icono-nombre">
-                                <img src="../assets/mountain.svg" alt="Naturaleza" class="tipo-experiencia-icono" loading="lazy">
-                                <label for="naturaleza" class="nombre-img">Montaña</label>
-                              </div>
+                            <div class="icono-nombre" onclick="document.getElementById('naturaleza').click()">
+                              <img src="../assets/mountain.svg" alt="Naturaleza" class="tipo-experiencia-icono" loading="lazy">
+                              <div class="nombre-img">Montaña</div>
                             </div>
                           </div>
                         
+                          <!-- Ciudad -->
                           <div class="opcion">
                             <input type="radio" name="tipo" value="ciudad" id="ciudad">
-                            <div >
-                              <div class="icono-nombre">
-                                <img src="../assets/city.svg" alt="Ciudad" class="tipo-experiencia-icono" loading="lazy">
-                                <label for="ciudad" class="nombre-img">Ciudad</label>
-                              </div>
+                            <div class="icono-nombre" onclick="document.getElementById('ciudad').click()">
+                              <img src="../assets/city.svg" alt="Ciudad" class="tipo-experiencia-icono" loading="lazy">
+                              <div class="nombre-img">Ciudad</div>
                             </div>
                           </div>
                         
+                          <!-- Combinado -->
                           <div class="opcion">
                             <input type="radio" name="tipo" value="combinado" id="combinado">
-                            <div >
-                              <div class="icono-nombre">
-                                <img src="../assets/combinado.svg" alt="Combinado" class="tipo-experiencia-icono" loading="lazy">
-                                <label for="combinado" class="nombre-img">Un poco de todo</label>
-                              </div>
+                            <div class="icono-nombre" onclick="document.getElementById('combinado').click()">
+                              <img src="../assets/combinado.svg" alt="Combinado" class="tipo-experiencia-icono" loading="lazy">
+                              <div class="nombre-img">Un poco de todo</div>
                             </div>
                           </div>
-                        
                         </div>
+                        
                         
                       </li>
                   
