@@ -153,6 +153,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom Properties */
 :root {
     /* Color fondo de cuestionario y resultado */
     --color-blanco-opaco: rgba(255, 255, 255, 0.7);
@@ -176,9 +177,7 @@ body {
     - Resultado :
                 - Resultado-cerrar
                 - Resultado-dias
-
-    - Mostrar (Mostrar los resultados) :
-                  
+    - Mostrar (Mostrar los resultados) :        
    */
 .Cuestionario {
     width: 100%;

@@ -87,7 +87,7 @@
     fill : currentColor;
   }
 
-
+  /* Custom Properties */
   :root {
     /* Color para textos  y border  */
     --color-negro: #000000; 

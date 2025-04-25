@@ -1,3 +1,13 @@
+/*───────────────────────────────────────────────────────────────────────*\
+  style.css
+  - Reset
+  - Custom Properties
+  - Hero
+  - Destinos
+  - Info
+  - Responsive
+\*───────────────────────────────────────────────────────────────────────*/
+
 :root {
   font-size: 100%;
   font-family: system-ui, sans-serif;
@@ -142,20 +152,39 @@ body {
   overflow: hidden;
 }
 
+/* Custom Properties */
 :root {
   
+  /* Color para la parte de Info util y para mapa */
   --color-primario: rgb(252, 209, 22); 
+  /* Color representativo de la bandera de Colombia para mapa*/
   --color-secundario: rgb(0, 56, 168);
+  /* Color para mapa y boton de cerrar*/
   --color-terciario: rgb(206, 17, 38);  
+  /* Color de fondo*/
   --color-fondo: #f9f9f9;
+  /* Color para textos y borde*/
   --color-texto: #000; 
+  /* Fuente para la palabra Colombia del inicio */
   --font-decorativa: "Kaushan Script", cursive;
+  /* Estilo de sombra neumorfismo*/
   --sombra: 0 0 2rem rgba(0, 0, 0, 0.2);
 }
 
 
 
-
+ /* ------ Hero ------ */
+  /* Descripcion: Estilos para el Hero , donde esta el texto decorativo y el carrousel
+  Estructura:  
+    - Hero-h1 
+    - Hero-carrousel:
+                      - Hero-imagenes
+                      - Hero-img 
+                      - Hero-arrows
+                      - Hero-arrow 
+                      - Hero-arrow--prev
+                      - Hero-arrow--next
+   */
 .Hero {
   background-image: url(../assets/hero-img.webp);
   background-size: cover;
@@ -261,6 +290,22 @@ body {
   }
 }
 
+ /* ------ Destinos ------ */
+  /* Descripcion: Estilos para el mapa y la info que describe el departamento seleccionado
+  Estructura:  
+    - Regiones:
+              - Lugar-mapa
+              - mapa
+              - modal-titulo
+              - Departamento
+              - Departamento-img
+              - Departamento-descripcion
+              - Capital
+              - Destinos-mapa
+              - mapsvg-svg
+    - Regiones-info: 
+                    - 
+   */
 .Destinos {
   min-height: 100vh;
 
@@ -395,27 +440,36 @@ body {
   }
 }
 
+ /* ------ Info ------ */
+  /* Descripcion: Estilos para el bloque con svgs de información util y para el modal que sale 
+  al hacer click en alguno 
+  Estructura:  
+    - Info-util : 
+                            - Info-especifica
+                            - Info-img
+                            - isVisible
+                            - Info-superior
+                            - Info-superior-titulo
+                            - Info-superior-cerrar   
+                            - Info-superior-llegar-transportarse
+                            - Imperdibles-img
+                            - Bebidas-postres
+                            - Postres-img 
+   */
 .Info {
-
   background: var(--color-primario);
   box-shadow: 1.25rem 1.25rem 3.75rem #bebebe,
     -1.25rem -1.25rem 3.75rem var(--color-fondo);
   margin: 1.25rem 0 0 0;
   border-radius: 1.25rem;
-
   min-height: 100vh;
   width: 100%;
-
   padding: 3.125rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   position: relative;
-
-
-
-
 
   .Info-util {
     display: grid;
@@ -434,7 +488,6 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-
       z-index: 1;
       transition: scale .5s ease, opacity .5s ease, transform 0.5s ease;
 
@@ -442,22 +495,15 @@ body {
         width: 6.25rem;
         height: 6.25rem;
         object-fit: cover;
-
-
       }
-
-
     }
 
     .isVisible {
       opacity: 1;
       transform: translateY(0);
-
-
     }
 
     .Info-especifica:hover {
-
       scale: 1.2;
     }
 
@@ -557,23 +603,18 @@ body {
           scale: 0.9;
         }
 
-
-
         .Bebidas-postres {
-
           min-height: 12.5rem;
           display: flex;
           gap: 2rem;
           margin: 1.25rem 0 0 0;
           width: 50%;
-
           .Postres-img {
             max-height: 11.25rem;
             object-fit: cover;
             border-radius: 1.25rem;
             transition: scale .5s ease;
           }
-
           .Postres-img:hover{
             scale: 0.9;
           }
@@ -581,9 +622,6 @@ body {
         }
 
       }
-
-
-
 
     }
 
@@ -599,7 +637,7 @@ body {
 
 
 
-
+/* Responsive */
 @media (max-width: 1100px) {
   .Hero {
     .Hero-h1 {
