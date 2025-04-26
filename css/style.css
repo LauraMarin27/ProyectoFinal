@@ -152,6 +152,13 @@ body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Kaushan Script";
+  src: url('../fonts/KaushanScript-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Custom Properties */
 :root {
   /* Color para la parte de Info util y para mapa */
@@ -332,6 +339,10 @@ Estructura:
   border: var(--color-texto) 1px solid;
   border-bottom-left-radius: 3.125rem;
   border-bottom-right-radius: 3.125rem;
+}
+
+.Departamento-h3{
+  text-transform: capitalize;
 }
 .Capital {
   display: flex;

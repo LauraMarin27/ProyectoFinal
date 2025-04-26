@@ -31,11 +31,14 @@
 /* ──────────────── TABS POR REGIÓN ──────────────── */
 // 1. Selección de elementos del DOM
 
-// Selección de todos los botones de pestañas de regiones
-const tabs = document.querySelectorAll('.Regiones-tabs-button')
-// Selección de todos los contenedores de contenido por región
-const tabContents = document.querySelectorAll('.Regiones-content')
+//Contenedor por Región 
+const regionContainer = document.querySelectorAll(`.Regiones-container`)
 
+regionContainer.forEach(region => {
+// Selección de todos los botones de pestañas de regiones
+const tabs = region.querySelectorAll('.Regiones-tabs-button')
+// Selección de todos los contenedores de contenido por región
+const tabContents = region.querySelectorAll('.Regiones-content')
 
 // 2. Listeners
 /**
@@ -50,14 +53,13 @@ tabs.forEach((_, i) => {
         tabs.forEach((_, j) => {
             tabs[j].classList.remove('Regiones-tabs-button--active')
             tabContents[j].classList.remove('Regiones-content--active')
-
         })
 
         tabs[i].classList.add('Regiones-tabs-button--active')
-
         tabContents[i].classList.add('Regiones-content--active')
-
     })
+})
+
 })
 
 /* ──────── IMAGEN AMPLIADA DE DEPARTAMENTOS ──────── */
@@ -203,7 +205,9 @@ document.querySelectorAll('.Regiones-content').forEach((regionContent) => {
             moverCarrousel()
         }
     }
-
+    // Cosas a mejorar : ahora mismo cuando con el teclado paso el carrousel 
+    // se mueven todos los carrouseles ya que al estar con window no diferencia cual sección se ha movido
+    // cosa que no pasa con el click
     window.addEventListener(`keydown`, windowKeydownHandler)
 
 })
